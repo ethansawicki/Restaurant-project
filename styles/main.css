@@ -38,3 +38,18 @@ body{
         margin: 50px;
 }
 
+.ethan {
+         display: flex;
+         border:1px solid #FFC72D;
+         min-height:500Px;
+         padding:20px;
+         margin:10px;
+         background-color: #E3E3E3;
+         box-shadow: #AD4723 2px 2px 5px;
+         border-radius: 50PX 50PX 0PX 0PX ;
+         margin: 50px;
+}
+
+.ethan-list {
+        display: flex;
+}
