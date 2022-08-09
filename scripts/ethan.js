@@ -21,7 +21,7 @@ const tables = [
 const orders = [
     {
         id: 1,
-        tableID: 2,
+        tableID: 1,
         partyOf: 4,
         mealType: "Dinner",
         appetizer: true,
@@ -31,7 +31,7 @@ const orders = [
     },
     {
         id: 2,
-        tableID: 1,
+        tableID: 2,
         partyOf: 2,
         mealType: "Dinner",
         appetizer: true,
@@ -51,24 +51,24 @@ const orders = [
     }
 ]
 
-let returnToDOM = `<section class="ethan-list">`
+let rendertoHTML = `<section class="ethan-section">`
 
 for (const order of orders) {
     for (const table of tables) {
         if(table.table === order.tableID) {
-            returnToDOM += `<ul>`
-            returnToDOM += `<h3>Table: ${table.table}</h3>`
-            returnToDOM += `<li>Party Of: ${order.partyOf}</li>`
-            returnToDOM += `<li>Table Reservation Date: ${table.reservationDate}</li>`
-            returnToDOM += `<li>Table Reservation?: ${table.reservation}</li>`
-            returnToDOM += `<li>Order Appetizer: ${order.appetizer}</li>`
-            returnToDOM += `<li>Order Entree: ${order.entree}</li>`
-            returnToDOM += `<li>Order Dessert: ${order.dessert}</li>`
-            returnToDOM += `<li>Order Drink: ${order.drink}</li>`
-            returnToDOM += `</ul>`
+            rendertoHTML += `<ul class="ethan-list">`
+            rendertoHTML += `<h3 class="ethan-table">Table: ${table.table}</h3>`
+            rendertoHTML += `<li>Party Of: ${order.partyOf}</li>`
+            rendertoHTML += `<li>Table Reservation Date: ${table.reservationDate}</li>`
+            rendertoHTML += `<li>Table Reservation?: ${table.reservation}</li>`
+            rendertoHTML += `<li>Order Appetizer: ${order.appetizer}</li>`
+            rendertoHTML += `<li>Order Entree(s): ${order.entree}</li>`
+            rendertoHTML += `<li>Order Dessert: ${order.dessert}</li>`
+            rendertoHTML += `<li>Order Drink: ${order.drink}</li>`
+            rendertoHTML += `</ul>`
         }    
     }
 }
-returnToDOM += `</section>`
+rendertoHTML += `</section>`
 
-document.querySelector('.ethan').innerHTML = returnToDOM
+document.querySelector('.ethan').innerHTML = rendertoHTML
