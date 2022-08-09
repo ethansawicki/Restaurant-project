@@ -1,0 +1,20 @@
+.masonTable {
+    font-family: "Arial Narrow",Arial, sans-serif, monospace;
+    font-size: 1.2em;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px gray;
+}
+
+.masonLegend {
+    background: white;
+    font-size: 1.25em;
+    padding: 2px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.masonList {
+    list-style: none;
+}
