@@ -1,43 +1,121 @@
-*{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        flex-wrap: wrap;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
-body{
-        background-color: #F7F7F7;
-               display: flex;
-        /*  width: 100%; */
-        justify-content: center;
-        /* flex-wrap: wrap; */
-        
-} 
-.tables_style{
-        display: flex;
-        display: inline-block;
-       /*  align-items: center; */
-        /* justify-content: center; */
-        width: 95%;
-        
-        
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
 }
-.style{
-        /* display: block ;*/
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        border:1px solid #FFC72D;
-        align-items: flex-end;
-        /* width:100%; */
-        min-height:500Px;
-        padding:20px;
-        margin:10px;
-        background-color: #E3E3E3;
-        box-shadow: #AD4723 2px 2px 5px;
-        border-radius: 50PX 50PX 0PX 0PX ;
-        margin: 50px;
+.tables_style {
+    display: flex;
+    display: inline-block;
+    margin-top: 50px;
+    width: 90%;
+}
+.style {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid #ffc72d;
+    align-items: flex-end;
+    min-height: 500px;
+    padding: 20px;
+    background-color: #e3e3e3;
+    box-shadow: #ad4723 2px 2px 5px;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: 50px;
+    position: relative;
+    margin-bottom: 50px;
+    z-index: -1;
 }
 
+.border {
+    background-color: #ad4723;
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    border: 1px solid #ad4723;
+    box-shadow: #ad4723 2px 0px 5px;
+    /* margin-top: 100px; */
+}
+
+.teamName {
+    color: #f7f7f7;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    line-height: 53px;
+    margin-left: 10%;
+    font-weight: 100;
+}
+.img {
+    margin: 50px;
+    width: 95%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+}
+
+
+.navBar {
+    background-color: #ad4723;
+}
+.navList {
+    float: left;
+}
+
+.navList {
+    color: white;
+    text-align: center;
+    /*  padding: 14px 100px; */
+    list-style: none;
+    margin: 10px;
+    width: 300px;
+    color: #f7f7f7;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.2em;
+    border-left: #f7f7f7 2px solid;
+}
+
+/* .navList /* a:hover   {
+    background-color: #d9d9d9;
+} */
+
+.topBorder {
+    width: 100%;
+    height: 91px;
+    left: 0px;
+    top: 279px;
+    background: #d9d9d9;
+}
+
+.footer {
+    width: 100%;
+    height: 70px;
+    background-color: #7b2c06;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+.iconify {
+    font-size: 50px;
+    padding: 10p;
+}
+=======
 .ethan {
         display: flex;
         justify-content: space-around;
