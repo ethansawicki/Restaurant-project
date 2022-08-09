@@ -67,6 +67,7 @@ body {
     align-items: center;
 }
 
+
 .navBar {
     background-color: #ad4723;
 }
@@ -113,4 +114,41 @@ body {
 .iconify {
     font-size: 50px;
     padding: 10p;
+}
+=======
+.ethan {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        border:1px solid #FFC72D;
+        align-items: flex-end;
+        min-height:500Px;
+        padding:20px;
+        margin:10px;
+        background-color: #E3E3E3;
+        box-shadow: #AD4723 2px 2px 5px;
+        border-radius: 50PX 50PX 0PX 0PX ;
+        margin: 50px;
+}
+
+.ethan-section {
+        display: flex;
+        padding: 10%;
+        justify-content: space-between;
+}
+
+.ethan-list {
+         /* width: 80%; */
+    color: brown;
+    height: 400px;
+    min-width: 300px;
+    margin: 5px;
+    padding: 30px;
+    /* line-height: 30px; */
+    font-size: 20px;
+    font-family: "Arial Narrow",Arial, sans-serif, monospace;
+    background-color: #F7F7F7;
+    box-shadow: #c7c0be 2px 2px 5px;
+    border-radius: 3px;
+    justify-content: center;
 }
