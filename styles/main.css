@@ -62,14 +62,18 @@ body {
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     height: 50px;
     align-items: center;
 }
 
-
 .navBar {
     background-color: #ad4723;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
 }
 .navList {
     float: left;
@@ -78,15 +82,15 @@ body {
 .navList {
     color: white;
     text-align: center;
-    /*  padding: 14px 100px; */
+     padding: 0px 30px;
     list-style: none;
-    margin: 10px;
-    width: 300px;
+    margin: 10px 0px;
     color: #f7f7f7;
     font-family: "Oswald", Arial, Helvetica, sans-serif;
     font-size: 25px;
     letter-spacing: 0.2em;
     border-left: #f7f7f7 2px solid;
+    border-right: #f7f7f7 2px solid;
 }
 
 /* .navList /* a:hover   {
@@ -115,30 +119,30 @@ body {
     font-size: 50px;
     padding: 10p;
 }
-=======
+
 .ethan {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        border:1px solid #FFC72D;
-        align-items: flex-end;
-        min-height:500Px;
-        padding:20px;
-        margin:10px;
-        background-color: #E3E3E3;
-        box-shadow: #AD4723 2px 2px 5px;
-        border-radius: 50PX 50PX 0PX 0PX ;
-        margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid #ffc72d;
+    align-items: flex-end;
+    min-height: 500px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #e3e3e3;
+    box-shadow: #ad4723 2px 2px 5px;
+    border-radius: 50px 50px 0px 0px;
+    margin: 50px;
 }
 
 .ethan-section {
-        display: flex;
-        padding: 10%;
-        justify-content: space-between;
+    display: flex;
+    padding: 10%;
+    justify-content: space-between;
 }
 
 .ethan-list {
-         /* width: 80%; */
+    /* width: 80%; */
     color: brown;
     height: 400px;
     min-width: 300px;
@@ -146,8 +150,8 @@ body {
     padding: 30px;
     /* line-height: 30px; */
     font-size: 20px;
-    font-family: "Arial Narrow",Arial, sans-serif, monospace;
-    background-color: #F7F7F7;
+    font-family: "Arial Narrow", Arial, sans-serif, monospace;
+    background-color: #f7f7f7;
     box-shadow: #c7c0be 2px 2px 5px;
     border-radius: 3px;
     justify-content: center;
