@@ -71,4 +71,4 @@ for (const order of orders) {
 }
 rendertoHTML += `</section>`
 
-document.querySelector('.ethan').innerHTML = rendertoHTML
+document.querySelector('#ethan').innerHTML = rendertoHTML

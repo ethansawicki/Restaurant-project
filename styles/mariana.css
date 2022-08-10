@@ -1,7 +1,8 @@
 .table {
     color: brown;
-    height: 400px;
+    height: 440px;
     min-width: 300px;
+    max-width: 300px;
     margin-top: 50px;
     padding: 30px;
     font-size: 20px;
