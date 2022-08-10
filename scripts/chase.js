@@ -1,7 +1,7 @@
-const chasesTables = [
+const tables = [
    {
     id: 1, 
-    table: 13,
+    table: 7,
     reservation: false,
     Time: "12:00pm",
     menuType: "Lunch",
@@ -10,15 +10,15 @@ const chasesTables = [
     serverName: "Chase",
     soupOrSalad: true,
     entree: ["Fish", "Chicken", "Beef", "Vegetarian"],
-    beef: ["Rare", "Med-Rare", "Well"],
+    beef: "Med-Rare",
     drinkFromBar: false,
     water: "Sparkling",
-    desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee"],
+    desert: null,
     orderStatus: "In-Progress"
    },
    {
     id: 2, 
-    table: 14,
+    table: 8,
     reservation: true,
     Time: "7:00pm",
     menuType: "Dinner",
@@ -26,16 +26,16 @@ const chasesTables = [
     highChairs: false,
     serverName: "Chase",
     soupOrSalad: true,
-    entree: ["Fish", "Chicken", "Beef", "Vegetarian"],
-    beef: ["Rare", "Med-Rare", "Well"],
+    entree: ["Fish", "Chicken"],
+    beef: null,
     drinkFromBar: true,
     water: "Still",
-    desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee"],
+    desert: "Creme brulee",
     orderStatus: "Completed"
    },
    {
     id: 3, 
-    table: 15,
+    table: 9,
     reservation: false,
     Time: "8:00pm",
     menuType: "Dinner",
@@ -43,17 +43,31 @@ const chasesTables = [
     highChairs: false,
     serverName: "Chase",
     soupOrSalad: false,
-    entree: ["Fish", "Chicken", "Beef", "Vegetarian"],
-    beef: ["Rare", "Med-Rare", "Well"],
+    entree: ["Beef", "Beef", "Beef", "Beef"],
+    beef: ["Rare", "Med-Rare", "Well", "Rare"],
     drinkFromBar: true,
     water: "Sparkling",
-    desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee"],
+    desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee", "Ice Cream"],
     orderStatus: "Completed"
    }
 ]
 
-
-for (const chase of chasesTables){
-    console.log(chase);
+let chase = '';
+for (const table of tables) {
+    chase += '\n<section>\n\t<ul>'
+    for (const info in table) {
+        chase += `\n\t\t<li>${info}: ${table[info]}</li>`
+    }
+    chase += '\n\t</ul>\n</section>'
 }
-document.getElementById("chase").innerHTML = chase.menuType
+
+document.getElementById('chase').innerHTML = chase;
+
+
+
+
+
+
+
+
+
