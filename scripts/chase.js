@@ -1,3 +1,4 @@
+
 const tables = [
    {
     id: 1, 
@@ -62,6 +63,7 @@ for (const table of tables) {
 }
 
 document.getElementById('chase').innerHTML = chase;
+
 
 
 
