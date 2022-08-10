@@ -53,13 +53,13 @@ const tables = [
    }
 ]
 
-let chase = '';
+let chase = ``;
 for (const table of tables) {
-    chase += '\n<section>\n\t<ul>'
+    chase += `<fieldset class="table"><legend>Table_${table.table}</legend><ul>`
     for (const info in table) {
-        chase += `\n\t\t<li>${info}: ${table[info]}</li>`
+        chase += `<li class="list">${info}: ${table[info]}</li>`
     }
-    chase += '\n\t</ul>\n</section>'
+    chase += `</ul></fieldset>`
 }
 
 document.getElementById('chase').innerHTML = chase;
