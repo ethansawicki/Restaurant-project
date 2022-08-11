@@ -1,3 +1,4 @@
+/*
 /* const htmlString = `<h1 class="h1">I am from JS</h1>
  
 `
@@ -80,6 +81,7 @@ document.getElementById('mariana').innerHTML = htmlAuthors */
 
 document.getElementById("Table_6").innerHTML = Table_66; */
 /*---------------------------------------------------------------NAV_BAR- THis One Works ---*/
+/*
 const navElement = document.createElement("nav");
 const nameUList = document.createElement("ul");
 const name_List = document.createElement("li");
@@ -96,11 +98,12 @@ name_List.appendChild(mariana);
 name_List.appendChild(chase);
 name_List.appendChild(jimmy);
 name_List.appendChild(mason);
-
+*/
 /*---------------------------------------------------------------BORDER- THis One Works ---*/
 /*---------------------------------------------------------------FOOTER- THis One Works ---*/
 
 /*---------------------------------------------------------------Table_4- THis One Works ---*/
+/*
 let table_4 = {
     reservation: true,
     id: 4,
@@ -139,8 +142,9 @@ const table = [
         </fieldset>`,
 ];
 document.getElementById("Table_4").innerHTML = table;
-
+*/
 /*---------------------------------------------------------------Table_5- THis One Works ---*/
+/*
 let table_5 = {
     Reservation: false,
     id: 5,
@@ -165,8 +169,9 @@ for (const item in table_5) {
 Table_5_list += "</ul> </ fieldset>";
 
 document.getElementById("Table_5").innerHTML = Table_5_list;
-
+*/
 /*---------------------------------------------------------------Table_6- THis One Works ---*/
+/*
 const Table_6 = [
     `<fieldset class="table">
       <legend>Table_6</legend>
@@ -189,7 +194,7 @@ const Table_6 = [
     </fieldset>`,
 ];
 document.getElementById("Table_6").innerHTML = Table_6;
-
+*/
 /*---------------------------------------------------------------Footer- THis One Works ---*/
 //1-create footerElement
 //let footerElement = document.createElement("Footer");
@@ -197,7 +202,30 @@ document.getElementById("Table_6").innerHTML = Table_6;
 //2-add text content to the footer
 
 /*------------------------------------------Table_4   Table_5   Table_6- THis One Works ---*/
-/* const tables = [
+/*const item_price = {
+    ////Reservation: false,
+    //id: 6,
+    //"Reservation Date": "8 / 6 / 2022",
+    //"Reservation Time": "07:00 pm",
+    //"Waiter Name": "Elma",
+    //Meal: "Lunch",
+    //"High Chairs": false,
+    //"Guests Number": 2,
+    Soup_Salad: 4.99,
+    Alcohol_Drink: 20.77,
+    Chicken: 9.99,
+    Ice_Cream: 5.99,
+    //Water: "Sparkling",
+    //"Order Status": "Completed",
+};
+
+/* console.log(`${item_price.Chicken}`); */
+/*
+let Soup_Salad = `${item_price.Chicken}`;
+let Alcohol_Drink = `${item_price.Alcohol_Drink}`;
+let Chicken = `${item_price.Chicken}`;
+let Ice_Cream = `${item_price.Chicken}`;
+const tables = [
     {
         Reservation: false,
         id: 4,
@@ -213,6 +241,7 @@ document.getElementById("Table_6").innerHTML = Table_6;
         Desert: "Ice Cream",
         Water: "Sparkling",
         "Order Status": "Progress",
+        Price: 1.25,
     },
     {
         Reservation: false,
@@ -220,7 +249,7 @@ document.getElementById("Table_6").innerHTML = Table_6;
         "Reservation Date": "8 / 6 / 2022",
         "Reservation Time": "06:00 pm",
         "Waiter Name": "Elma",
-        Meal: "Lunch",
+        Meal: "dinner",
         "High Chairs": false,
         "Guests Number": 2,
         "Soup Salad": true,
@@ -229,6 +258,7 @@ document.getElementById("Table_6").innerHTML = Table_6;
         Desert: "Ice Cream",
         Water: "Sparkling",
         "Order Status": "Progress",
+        Price: 1.3,
     },
     {
         Reservation: false,
@@ -241,19 +271,103 @@ document.getElementById("Table_6").innerHTML = Table_6;
         "Guests Number": 2,
         "Soup Salad": true,
         "Alcohol Drink": true,
-        Entree: "Chicken",
-        Desert: "Ice Cream",
+        Entree : [{Chicken:8.88}],
+        Desert: Ice_Cream,
         Water: "Sparkling",
         "Order Status": "Completed",
+        Price: 1.4,
     },
 ];
-let tables456 = ` `;
+let price = 0
+price = Object.values(tables[2].Entree[0]);
+//console.log(Object.values(tables[2].Entree[0]));
+console.log(price);*/
+
+const tables = [
+    {
+        Reservation: false,
+        id: 4,
+        Reservation_Date: "8 / 6 / 2022",
+        Reservation_Time: "05:00 pm",
+        Waiter_Name: "Elma",
+        Meal: "Lunch",
+        High_Chairs: false,
+        Guests_Number: 2,
+        Soup_Salad: true,
+        Alcohol_Drink: true,
+        Entree: "Stake",
+        Desert: "Ice Cream1",
+        Water: "Sparkling",
+        Order_Status: "Progress",
+    },
+    {
+        Reservation: false,
+        id: 5,
+        Reservation_Date: "8 / 6 / 2022",
+        Reservation_Time: "06:00 pm",
+        Waiter_Name: "Elma",
+        Meal: "Lunch",
+        High_Chairs: false,
+        Guests_Number: 2,
+        Soup_Salad: true,
+        Alcohol_Drink: true,
+        Entree: "Fish",
+        Desert: "Ice Cream2",
+        Water: "Sparkling",
+        Order_Status: "Progress",
+    },
+    {
+        Reservation: false,
+        id: 6,
+        Reservation_Date: "8 / 6 / 2022",
+        Reservation_Time: "07:00 pm",
+        Waiter_Name: "Elma",
+        Meal: "Lunch",
+        High_Chairs: false,
+        Guests_Number: 2,
+        Soup_Salad: true,
+        Alcohol_Drink: true,
+        Entree: "Chicken",
+        Desert: "Ice Cream3",
+        Water: "Sparkling",
+        Order_Status: "Completed",
+    },
+];
+/* let tables456 = ` `;
 for (let table of tables) {
     tables456 += `<fieldset class=table><legend>Table_${table.id} </legend> <ul>`;
     for (const row in table) {
         tables456 += `<li class =list>${row} : ${table[row]}</li>`;
     }
     tables456 += `</ul>  </fieldset>`;
+} */
+
+/*---------------------------------------------------------------Add New Table- THis One Works ---*/
+
+const newTable = {
+    Reservation: false,
+    id: "New_Table",
+    Reservation_Date: "8 / 6 / 2022",
+    Reservation_Time: "05:00 pm",
+    Waiter_Name: "Elma",
+    Meal: "Lunch",
+    High_Chairs: false,
+    Guests_Number: 2,
+    Soup_Salad: true,
+    Alcohol_Drink: true,
+    Entree: "Stake",
+    Desert: "Ice Cream1",
+    Water: "Sparkling",
+    Order_Status: "Progress",
+};
+
+for (const nTable of tables) {
+    for (const row in nTable) {
+        if (nTable[row] == "Completed") {
+            //tables.push(newTable);
+            nTable == newTable;
+        }
+        //console.log(nTable[row]);
+    }
 }
-document.getElementById("mariana").innerHTML = tables456;
- */
+console.log(tables);
