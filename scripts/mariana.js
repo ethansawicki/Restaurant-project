@@ -55,7 +55,7 @@ const tables = [
         Desert: "Ice Cream1",
         Water: "Sparkling",
         Order_Status: "Progress",
-        Price: 320.0,
+        Price: 320.99,
     },
     {
         Reservation: false,
@@ -72,7 +72,7 @@ const tables = [
         Desert: "Ice Cream2",
         Water: "Sparkling",
         Order_Status: "Progress",
-        Price: 125.0,
+        Price: 125.75,
     },
     {
         Reservation: false,
@@ -89,7 +89,7 @@ const tables = [
         Desert: "Ice Cream3",
         Water: "Sparkling",
         Order_Status: "Completed",
-        Price: 110.0,
+        Price: 110.59,
     },
 ];
 /* let tables456 = ` `;
@@ -118,7 +118,7 @@ let newTable = {
     Desert: "Apple Pie",
     Water: "Sparkling",
     Order_Status: "Progress",
-    Price: 256.0,
+    Price: 256.99,
 };
 
 for (const nTable of tables) {
@@ -136,13 +136,15 @@ let Total_Price = ``;
 let totalPrice = 0;
 let tips = 0;
 for (const pTable of tables) {
-    totalPrice += pTable.Price;
+    totalPrice += Math.round(pTable.Price);
     tips = Math.round(totalPrice * 0.02);
 }
 
+/*--------------------------------------------------------------HTML_Preview-Price THis One Works ---*/
+
 //console.log(totalPrice);
 //console.log(tips);
-Total_Price=  `<div>Total Price is $${totalPrice}.00 && Tips $${tips}.00 </div>`;
+Total_Price = `<div>Total Price is $${totalPrice}.00 && Tips $${tips}.00 </div>`;
 document.getElementById("mPrices").innerHTML = Total_Price;
 /*---------------------------------------------------------HTML_Preview-Tables THis One Works ---*/
 
@@ -156,7 +158,7 @@ for (let table of tables) {
 }
 document.getElementById("mariana").innerHTML = tables456;
 
-/*--------------------------------------------------------------HTML_Preview-Price THis One Works ---*/
+/*--------------------------------------------------------------HTML_Preview-Price THis One is on progress ---*/
 /* let table_4_price = tables[0].Price;
 table_4_price = 0;
 for (const meal of tables[0]) {
