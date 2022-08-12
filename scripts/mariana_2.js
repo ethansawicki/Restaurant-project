@@ -299,6 +299,7 @@ const tables = [
         Desert: "Ice Cream1",
         Water: "Sparkling",
         Order_Status: "Progress",
+        Price: 44.0,
     },
     {
         Reservation: false,
@@ -315,6 +316,7 @@ const tables = [
         Desert: "Ice Cream2",
         Water: "Sparkling",
         Order_Status: "Progress",
+        Price: 55.0,
     },
     {
         Reservation: false,
@@ -331,6 +333,7 @@ const tables = [
         Desert: "Ice Cream3",
         Water: "Sparkling",
         Order_Status: "Completed",
+        Price: 66.0,
     },
 ];
 /* let tables456 = ` `;
@@ -359,15 +362,36 @@ const newTable = {
     Desert: "Ice Cream1",
     Water: "Sparkling",
     Order_Status: "Progress",
+    Price: 58.0,
 };
 
+//New table
 for (const nTable of tables) {
     for (const row in nTable) {
         if (nTable[row] == "Completed") {
-            //tables.push(newTable);
+            tables.push(newTable);
             nTable == newTable;
         }
         //console.log(nTable[row]);
     }
 }
-console.log(tables);
+//console.log(tables);
+let totalPrice = 0;
+let tips = 0;
+for (const pTable of tables) {
+    totalPrice += pTable.Price;
+    tips = Math.round(totalPrice * 0.02);
+}
+//console.log(totalPrice);
+//console.log(tips);
+
+//console.log(tables[0].Entree);
+/*----------------------------------------HTML_Preview-Price THis One Works ---*/
+//let table_4_price = tables[0].Price;
+//table_4_price = 0;
+for (const table of tables) {
+    console.log(table[1]);
+}
+
+//console.log(tables[0].Entree);
+ 

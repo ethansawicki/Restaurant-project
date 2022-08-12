@@ -48,14 +48,14 @@ const tables = [
         Waiter_Name: "Elma",
         Meal: "Lunch",
         High_Chairs: false,
-        Guests_Number: 2,
+        Guests_Number: 7,
         Soup_Salad: true,
         Alcohol_Drink: true,
         Entree: "Stake",
         Desert: "Ice Cream1",
         Water: "Sparkling",
         Order_Status: "Progress",
-        Price: 44.0,
+        Price: 320.0,
     },
     {
         Reservation: false,
@@ -65,14 +65,14 @@ const tables = [
         Waiter_Name: "Elma",
         Meal: "Lunch",
         High_Chairs: false,
-        Guests_Number: 2,
+        Guests_Number: 5,
         Soup_Salad: true,
         Alcohol_Drink: true,
         Entree: "Fish",
         Desert: "Ice Cream2",
         Water: "Sparkling",
         Order_Status: "Progress",
-        Price: 55.0,
+        Price: 125.0,
     },
     {
         Reservation: false,
@@ -89,7 +89,7 @@ const tables = [
         Desert: "Ice Cream3",
         Water: "Sparkling",
         Order_Status: "Completed",
-        Price: 66.0,
+        Price: 110.0,
     },
 ];
 /* let tables456 = ` `;
@@ -118,7 +118,7 @@ let newTable = {
     Desert: "Apple Pie",
     Water: "Sparkling",
     Order_Status: "Progress",
-    Price: 77.0,
+    Price: 256.0,
 };
 
 for (const nTable of tables) {
@@ -128,9 +128,23 @@ for (const nTable of tables) {
         }
     }
 }
-console.log(tables);
+//console.log(tables);
 
-/*---------------------------------------------------------------HTML_Preview- THis One Works ---*/
+/*----------------------------------------------------------------FOOD_PRICE- THis One Works ---*/
+
+let Total_Price = ``;
+let totalPrice = 0;
+let tips = 0;
+for (const pTable of tables) {
+    totalPrice += pTable.Price;
+    tips = Math.round(totalPrice * 0.02);
+}
+
+//console.log(totalPrice);
+//console.log(tips);
+Total_Price=  `<div>Total Price is $${totalPrice}.00 && Tips $${tips}.00 </div>`;
+document.getElementById("mPrices").innerHTML = Total_Price;
+/*---------------------------------------------------------HTML_Preview-Tables THis One Works ---*/
 
 let tables456 = ` `;
 for (let table of tables) {
@@ -141,3 +155,19 @@ for (let table of tables) {
     tables456 += `</ul>  </fieldset>`;
 }
 document.getElementById("mariana").innerHTML = tables456;
+
+/*--------------------------------------------------------------HTML_Preview-Price THis One Works ---*/
+/* let table_4_price = tables[0].Price;
+table_4_price = 0;
+for (const meal of tables[0]) {
+    switch (meal) {
+        case meal.Alcohol_Drink:
+            break;
+
+        default:
+            break;
+    }
+}
+ */
+
+//document.getElementById("mPrice").innerHTML = totalPrice;
