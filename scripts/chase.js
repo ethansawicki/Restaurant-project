@@ -16,7 +16,8 @@ const tables = [
     water: "Sparkling",
     desert: null,
     orderStatus: "In-Progress",
-    tipAmount: 76
+    Price: 150,
+    TipPercent: 0.15
    },
    {
     id: 2, 
@@ -34,7 +35,8 @@ const tables = [
     water: "Still",
     desert: "Creme brulee",
     orderStatus: "Completed",
-    tipAmount: 45
+    Price: 83,
+    TipPercent: 0.20
    },
    {
     id: 3, 
@@ -50,9 +52,10 @@ const tables = [
     beef: ["Rare", "Med-Rare", "Well", "Rare"],
     drinkFromBar: true,
     water: "Sparkling",
-    desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee", "Ice Cream"],
+    desert: ["Cheesecake", "Pie", "Ice Cream"],
     orderStatus: "Completed",
-    tipAmount: 100
+    Price: 100,
+    TipPercent: 0.25
    }
 ]
 
@@ -67,7 +70,13 @@ for (const table of tables) {
 
 document.getElementById('chase').innerHTML = chase;
 
+let tipsTotal = 0;
+for (const table of tables) {
+    tipsTotal += table.Price * table.TipPercent;
+};
 
+document.getElementById('chaseTips').innerHTML = `Total in Tips: <span class="chaseTipsValue">$${tipsTotal.toFixed(2)}</span>`;
+console.log(tipsTotal);
 
 
 
