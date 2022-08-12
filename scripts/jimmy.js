@@ -17,6 +17,7 @@ const tables = [
         id: 11,
         
         Waiter: 'Jimmy',
+        
         Reservation: false,
         Guests: 3,
         Drinks: ['water', 'unsweet tea', 'thai tea'],
@@ -61,9 +62,11 @@ let jimmy = '';
 for (const table of tables) {
     jimmy += `<fieldset class=table><legend class=nice>${table.id} </legend> <ul>`;
     for (const data in table) {
-        jimmy += `\n\t\t<li class='list'>${data}: ${table[data]}</li>`
+        jimmy += `\n\t\t<li class='list'>${data}: <span class=colour>${table[data]}</span></li>`
     }
     jimmy += '\n\t</ul>\n</fieldset>'
 }
 
 document.getElementById('jimmy').innerHTML = jimmy;
+
+
