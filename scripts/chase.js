@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-=======
-=======
 
->>>>>>> 738fae4f70aa7285cb2970e8c45396c1c06d646b
 const tables = [
    {
     id: 1, 
@@ -21,7 +15,8 @@ const tables = [
     drinkFromBar: false,
     water: "Sparkling",
     desert: null,
-    orderStatus: "In-Progress"
+    orderStatus: "In-Progress",
+    tipAmount: 76
    },
    {
     id: 2, 
@@ -38,7 +33,8 @@ const tables = [
     drinkFromBar: true,
     water: "Still",
     desert: "Creme brulee",
-    orderStatus: "Completed"
+    orderStatus: "Completed",
+    tipAmount: 45
    },
    {
     id: 3, 
@@ -55,7 +51,8 @@ const tables = [
     drinkFromBar: true,
     water: "Sparkling",
     desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee", "Ice Cream"],
-    orderStatus: "Completed"
+    orderStatus: "Completed",
+    tipAmount: 100
    }
 ]
 
@@ -75,11 +72,3 @@ document.getElementById('chase').innerHTML = chase;
 
 
 
-
-
-
-<<<<<<< HEAD
->>>>>>> c35dcfbc1c54c6a38ddcd588825d0760d06582fa
-=======
-
->>>>>>> 738fae4f70aa7285cb2970e8c45396c1c06d646b

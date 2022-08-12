@@ -2,42 +2,42 @@ const tables = [
     {   
         id: 10,
         
-        waiter: 'Jimmy',
-        reservation: true,
-        guestAmount: 4,
-        drink: ['water', 'water', 
+        Waiter: 'Jimmy',
+        Reservation: true,
+        Guests: 4,
+        Drinks: ['water', 'water', 
         'coke', 'sweet tea'],
-        appetizer: ['eggrolls', 'edamame', 'wings'],
-        entree: ['chicken and waffles', 'chicken noodle soup', 
+        Appetizers: ['eggrolls', 'edamame', 'wings'],
+        Entrees: ['chicken and waffles', 'chicken noodle soup', 
         'chicken katsu', 'shoyu ramen'],
-        dessert: false
+        Desserts: false
     },
         
     {   
         id: 11,
         
-        waiter: 'Jimmy',
-        reservation: false,
-        guestAmount: 3,
-        drink: ['water', 'unsweet tea', 'thai tea'],
-        appetizer: ['gyoza', 'queso con chorizo', 'fries'],
-        entree: ['tacos al pastor', 'steak and potatos', 
+        Waiter: 'Jimmy',
+        Reservation: false,
+        Guests: 3,
+        Drinks: ['water', 'unsweet tea', 'thai tea'],
+        Appetizers: ['gyoza', 'queso con chorizo', 'fries'],
+        Entrees: ['tacos al pastor', 'steak and potatos', 
         'wagyu crispy rice'],
-        dessert: ['caramel pie', 'mango sticky rice', 
+        Dessert: ['caramel pie', 'mango sticky rice', 
         'tiramisu']
     },
     {   
         id: 12,
         
-        waiter: 'Jimmy',
-        reservation: false,
-        guestAmount: 4,
-        drink: ['gin and tonic', 'moscow mule', 
+        Waiter: 'Jimmy',
+        Reservation: false,
+        Guests: 4,
+        Drinks: ['gin and tonic', 'moscow mule', 
         'sapporo', 'bulleit bourbon neat'],
-        appetizer: false,
-        entree: ['chicken alfredo', 'hot chicken', 
+        Appetizer: false,
+        Entrees: ['chicken alfredo', 'hot chicken', 
         'neapolitan pizza'],
-        dessert: false
+        Dessert: false
     }
 
 ]
@@ -59,7 +59,7 @@ document.getElementById("jimmy").innerHTML = jimtable;
 
 let jimmy = '';
 for (const table of tables) {
-    jimmy += `<fieldset class=table><legend>Table ${table.id} </legend> <ul>`;
+    jimmy += `<fieldset class=table><legend class=nice>${table.id} </legend> <ul>`;
     for (const data in table) {
         jimmy += `\n\t\t<li class='list'>${data}: ${table[data]}</li>`
     }
