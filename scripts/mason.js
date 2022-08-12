@@ -16,7 +16,9 @@ const parties = [
         Entree: ['salmon', 'cheesburger'],
         notes: 'no cheese on burger',
         Desert: ['apple pie', 'cake'],
-        OrderStatus: 'IN PROGRESS'
+        OrderStatus: 'IN PROGRESS',
+        Price: 40.13,
+        TipPercent: 0.15
     },
     {
         table: 14,
@@ -35,7 +37,9 @@ const parties = [
         Entree: ['cheesburger'],
         notes: 'sub fries for tots',
         Desert: ['none'],
-        OrderStatus: 'READY'
+        OrderStatus: 'READY',
+        Price: 21.50,
+        TipPercent: 0.4
     },
     {
         table: 15,
@@ -54,10 +58,13 @@ const parties = [
         Entree: ['chicken sandwich', 'cheesburger', 'grilled cheese', 'kids chicken tenders'],
         notes: 'no cheese on grilled cheese',
         Desert: ['cake', 'cake'],
-        OrderStatus: 'SERVED'
+        OrderStatus: 'SERVED',
+        Price: 75.64,
+        TipPercent: 0.01
     },
 ];
 
+// TABLE INFO
 let mason = '';
 for (const party of parties) {
     mason += `\n<fieldset class="masonTable">\n\t<legend class="masonLegend">Table_${party.table}</legend>\n\t<ul class="masonList">`;
@@ -71,3 +78,12 @@ for (const party of parties) {
 
 document.getElementById('mason').innerHTML = mason;
 console.log(mason);
+
+// TIPS
+let tipsTotal = 0;
+for (const party of parties) {
+    tipsTotal += party.Price * party.TipPercent;
+};
+
+document.getElementById('masonTips').innerHTML = `Total in Tips: <span class="masonTipsValue">$${tipsTotal.toFixed(2)}</span>`;
+console.log(tipsTotal);
