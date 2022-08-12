@@ -3,7 +3,7 @@
     height: 440px;
     min-width: 300px;
     max-width: 300px;
-    margin-top: 50px;
+    margin-top: 100px;
     padding: 30px;
     font-size: 20px;
     font-family: "Arial Narrow", Arial, sans-serif, monospace;
@@ -17,5 +17,13 @@
     list-style-type: square;
     /*list-style-position: inside;*/
 }
+
+ .tips{
+    color:brown;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    letter-spacing: normal;
+} 
 
 
