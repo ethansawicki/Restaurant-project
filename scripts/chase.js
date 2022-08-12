@@ -15,7 +15,8 @@ const tables = [
     drinkFromBar: false,
     water: "Sparkling",
     desert: null,
-    orderStatus: "In-Progress"
+    orderStatus: "In-Progress",
+    tipAmount: 76
    },
    {
     id: 2, 
@@ -32,7 +33,8 @@ const tables = [
     drinkFromBar: true,
     water: "Still",
     desert: "Creme brulee",
-    orderStatus: "Completed"
+    orderStatus: "Completed",
+    tipAmount: 45
    },
    {
     id: 3, 
@@ -49,7 +51,8 @@ const tables = [
     drinkFromBar: true,
     water: "Sparkling",
     desert: ["Cheesecake", "Choco-Molton Cake", "Creme brulee", "Ice Cream"],
-    orderStatus: "Completed"
+    orderStatus: "Completed",
+    tipAmount: 100
    }
 ]
 
@@ -63,7 +66,6 @@ for (const table of tables) {
 }
 
 document.getElementById('chase').innerHTML = chase;
-
 
 
 
