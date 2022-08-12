@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-=======
-=======
 
->>>>>>> 738fae4f70aa7285cb2970e8c45396c1c06d646b
 const tables = [
    {
     id: 1, 
@@ -76,10 +70,3 @@ document.getElementById('chase').innerHTML = chase;
 
 
 
-
-
-<<<<<<< HEAD
->>>>>>> c35dcfbc1c54c6a38ddcd588825d0760d06582fa
-=======
-
->>>>>>> 738fae4f70aa7285cb2970e8c45396c1c06d646b
