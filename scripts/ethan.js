@@ -31,17 +31,17 @@ const orders = [
     },
     {
         id: 2,
-        tableID: 1,
+        tableID: 3,
         partyOf: 2,
         mealType: "Dinner",
         appetizer: true,
         entree: ["Fish", " Salad"],
         dessert: "Creme Brulee",
-        drink: "Tea"
+        drink: ["Tea", " Water"]
     },
     {
         id: 3,
-        tableID: 3,
+        tableID: 1,
         partyOf: 1,
         mealType: "Lunch",
         appetizer: false,
@@ -54,8 +54,10 @@ const orders = [
 let renderToHTML = `<section class="ethan-section">`
 
 orders.sort((order) => {
-    if(order.tableID < 2) {
-       return -1
+    if(order.tableID > 2) {
+       return 1
+    } if(order.tableID < 2) {
+        return -2
     }
 })
 
