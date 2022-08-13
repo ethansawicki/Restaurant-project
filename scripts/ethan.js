@@ -27,7 +27,8 @@ const orders = [
         appetizer: true,
         entree: ["Steak", " Fish", " Burger", " Salad"],
         dessert: "Pie",
-        drink: "Yes Please"
+        drink: "Yes Please",
+        tip: 20
     },
     {
         id: 2,
@@ -37,7 +38,8 @@ const orders = [
         appetizer: true,
         entree: ["Fish", " Salad"],
         dessert: "Creme Brulee",
-        drink: ["Tea", " Water"]
+        drink: ["Tea", " Water"],
+        tip: 10
     },
     {
         id: 3,
@@ -47,7 +49,8 @@ const orders = [
         appetizer: false,
         entree: "Chicken",
         dessert: "N/A",
-        drink: "Coke"
+        drink: "Coke",
+        tip: 18
     }
 ]
 
@@ -73,6 +76,7 @@ for (const order of orders) {
             renderToHTML += `<li>Order Entree(s): ${order.entree}</li>`
             renderToHTML += `<li>Order Dessert: ${order.dessert}</li>`
             renderToHTML += `<li>Order Drink: ${order.drink}</li>`
+            renderToHTML += `<li>Tip: ${order.tip.toFixed(2)}%`
             renderToHTML += `</ul>`
         }    
     }
