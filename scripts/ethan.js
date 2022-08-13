@@ -21,7 +21,7 @@ const tables = [
 const orders = [
     {
         id: 1,
-        tableID: 1,
+        tableID: 2,
         partyOf: 4,
         mealType: "Dinner",
         appetizer: true,
@@ -31,7 +31,7 @@ const orders = [
     },
     {
         id: 2,
-        tableID: 2,
+        tableID: 1,
         partyOf: 2,
         mealType: "Dinner",
         appetizer: true,
@@ -51,24 +51,30 @@ const orders = [
     }
 ]
 
-let rendertoHTML = `<section class="ethan-section">`
+let renderToHTML = `<section class="ethan-section">`
+
+orders.sort((order) => {
+    if(order.tableID < 2) {
+       return -1
+    }
+})
 
 for (const order of orders) {
     for (const table of tables) {
         if(table.table === order.tableID) {
-            rendertoHTML += `<ul class="ethan-list">`
-            rendertoHTML += `<h3 class="ethan-table">Table: ${table.table}</h3>`
-            rendertoHTML += `<li>Party Of: ${order.partyOf}</li>`
-            rendertoHTML += `<li>Table Reservation Date: ${table.reservationDate}</li>`
-            rendertoHTML += `<li>Table Reservation?: ${table.reservation}</li>`
-            rendertoHTML += `<li>Order Appetizer: ${order.appetizer}</li>`
-            rendertoHTML += `<li>Order Entree(s): ${order.entree}</li>`
-            rendertoHTML += `<li>Order Dessert: ${order.dessert}</li>`
-            rendertoHTML += `<li>Order Drink: ${order.drink}</li>`
-            rendertoHTML += `</ul>`
+            renderToHTML += `<ul class="ethan-list">`
+            renderToHTML += `<h3 class="ethan-table">Table: ${table.table}</h3>`
+            renderToHTML += `<li>Party Of: ${order.partyOf}</li>`
+            renderToHTML += `<li>Table Reservation Date: ${table.reservationDate}</li>`
+            renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
+            renderToHTML += `<li>Order Appetizer: ${order.appetizer}</li>`
+            renderToHTML += `<li>Order Entree(s): ${order.entree}</li>`
+            renderToHTML += `<li>Order Dessert: ${order.dessert}</li>`
+            renderToHTML += `<li>Order Drink: ${order.drink}</li>`
+            renderToHTML += `</ul>`
         }    
     }
 }
-rendertoHTML += `</section>`
+renderToHTML += `</section>`
 
-document.querySelector('#ethan').innerHTML = rendertoHTML
+document.querySelector('#ethan').innerHTML = renderToHTML
