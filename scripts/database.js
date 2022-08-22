@@ -11,13 +11,13 @@ const tables = [
     },
     {
         id: 2,
-        menuID: [5,3,1],
+        menuID: 4 /* [5,3,1] */,
         menuType: "lunch",
         reservation: false,
         orderStatus: "complete",
         serverId: 2,
         guestsNumber: 3,
-        tipPercent: 2,
+        tipPercent: 0.2,
     },
     {
         id: 3,
@@ -172,38 +172,11 @@ export const tablesCopy = () => {
 };
 
 export const menuCopy = () => {
-    return menu.map(menuItem => ({...menuItem}))
-}
+    return menu.map((menuItem) => ({ ...menuItem }));
+};
 
-// export const serversCopy = () => {
-//     return servers.map(server => ({...server}))
-// }
+export const serversCopy = () => {
+    return servers.map((server) => ({ ...server }));
+};
 
-//let tableTest=tablesCopy()
-//  console.log(tableTest[1]);
 
-//const display_Table = () => {
-/* 
-let MarianaTable = ` `;
-MarianaTable = `
-<fieldset class=table>
-     <legend>Table_${tables[1].id} </legend>
-      <ul>`;
-for (x in tables[1]) {
-    MarianaTable += `<li>${x}</li>`;
-}
-MarianaTable = `</ul></fieldset>`;
-//`<fieldset class=table>
-//     <legend>Table_${tables[1].id} </legend>
-//      <ul>
-//      <li>${x}</li>
-//      </ul>
-//      </fieldset>`;
-//     console.log(x);
-// }
-
-//};
-//display_Table();
-
-document.getElementById("mariana").innerHTML = MarianaTable;
- */
