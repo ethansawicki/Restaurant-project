@@ -2,11 +2,10 @@ import { tablesCopy } from "./database.js";
 const tables = tablesCopy();
 import { menuCopy } from "./database.js";
 const menu = menuCopy();
-// import { serversCopy } from "./database.js";
-// const servers = serversCopy();
+import { serversCopy } from "./database.js";
+const servers = serversCopy();
 //.
-// /*--------------------Restaurant_2 Test_6-------Works!!!!----- ---*/
-
+// /*-------------Table_2-------Restaurant_2 Test_6-------Works!!!!----- ---*/
 // const display_Table = () => {
 //     let MarianaTable = ` `;
 //     MarianaTable = `<fieldset class=table>
@@ -21,7 +20,7 @@ const menu = menuCopy();
 // };
 // display_Table();
 
-//.// /*--------------------Restaurant_2 Test_1-------Works!!!!----- ---*/
+//.// /*------------Table_2--------Restaurant_2 Test_1-------Works!!!!----- ---*/
 // const display_Table = () => {
 //     const tables = tablesCopy();
 //     let MarianaTable = ``;
@@ -39,68 +38,74 @@ const menu = menuCopy();
 
 // display_Table();
 
-//.// /*--------------------Restaurant_2 Test_1------------ ---*/
-//menuID= [4, 5,6, 11],
-
+//.// /*----------Table_2----------Restaurant_2 Test_1--------Works!!!!---- ---*/
 const display_Table = () => {
-    const tables = tablesCopy();
-
-    //for (let x in tables[1].menuID) {
     for (let i = 0; i < menu.length; i++) {
-        let item = menu.find((item) => item.id === tables[1]);
-        //for (let x in tables[1]) {
+        let itemM = menu.find((itemM) => itemM.id === tables[1].menuID);
+        let serverM = servers.find(
+            (serverM) => serverM.id === tables[1].serverId
+        );
+        let totalPrices = menu.find(
+            (priceItemM) => priceItemM.id === tables[1].menuID
+        );
+        totalPrices = totalPrices.price;
+        let tips = totalPrices * 0.2;
         let MarianaTable = ``;
 
-        MarianaTable += `<fieldset class=table>
+        MarianaTable += `
+        <fieldset class=table>
         <legend>Table_${tables[1].id} </legend>
         <ul>`;
         MarianaTable += `
-<li class="list">id: ${tables[1].id}</li>
-<li class="list">menuID: ${tables[1].menuID}</li>
-<li class="list">menuType: ${tables[1].menuType}</li> 
-<li class="list">reservation: ${tables[1].reservation}</li>
-<li class="list">orderStatus: ${tables[1].orderStatus}</li>
-<li class="list">serverId: ${tables[1].serverId}</li>
-<li class="list">guestsNumber: ${tables[1].guestsNumber}</li>
-<li class="list">tipPercent: ${tables[1].tipPercent} %</li>`;
-        MarianaTable += `</ul>
-</fieldset>`;
+    <li class="list">id: ${tables[1].id}</li>
+    <li class="list">menuID: ${itemM.menuItem} $${totalPrices}</li>
+    <li class="list">menuType: ${tables[1].menuType}</li> 
+    <li class="list">reservation: ${tables[1].reservation}</li>
+    <li class="list">orderStatus: ${tables[1].orderStatus}</li> 
+    <li class="list">serverId: ${serverM.serverName}</li>
+    <li class="list">guestsNumber: ${tables[1].guestsNumber}</li>
+    <li class="list">tipPercent: $${tips}.00    (2%)</li>`;
+        MarianaTable += `
+        </ul></fieldset>`;
 
+        let xTips = `<div">Total Price: $${totalPrices}.00 && Tips: $${tips}.00</div>`;
+        /* -----------Tips------------ */
+        document.getElementById("mPrices").innerHTML = xTips;
         document.getElementById("mariana").innerHTML = MarianaTable;
     }
-    // }
 };
 
 display_Table();
-//item.menuItem
-/* -----------------Part_1----------------------- */
+
+/* ----------------Restaurant_Part_1----------------------- */
 // /*---------------------------------------------------------------NAV_BAR- THis One Works ---*/
-// let navbar = `<section class="nav">
-// <ul class="navBar">
-//     <a href="#ethan"><li class="navList">ETHAN</li></a>
-//     <a href="#mariana"><li class="navList">MARIANA</li></a>
-//     <a href="#chase"><li class="navList">CHASE</li></a>
-//     <a href="#jimmy"><li class="navList">JIMMY</li></a>
-//     <a href="#mason"><li class="navList">MASON</li></a>
-// </ul>
-// </section>`;
-// document.getElementById("navbar").innerHTML = navbar;
+let navbar = `<section class="nav">
+<ul class="navBar">
+    <a href="#ethan"><li class="navList">ETHAN</li></a>
+    <a href="#mariana"><li class="navList">MARIANA</li></a>
+    <a href="#chase"><li class="navList">CHASE</li></a>
+    <a href="#jimmy"><li class="navList">JIMMY</li></a>
+    <a href="#mason"><li class="navList">MASON</li></a>
+</ul>
+</section>`;
+document.getElementById("navbar").innerHTML = navbar;
 
 // /*---------------------------------------------------------------LOGO- THis One Works ---*/
-// let logo = `<img class="img-logo" src="/img_Style/Logo.jpg" alt="restaurant Logo" />`;
-// document.getElementById("logo").innerHTML = logo;
-// /*-----------------------------------------------------------Top BORDER- THis One Works ---*/
+let logo = `<img class="img-logo" src="/img_Style/Logo.jpg" alt="restaurant Logo" />`;
+document.getElementById("logo").innerHTML = logo;
 
-// /* let topBorder =
-// ``
-// document.getElementById("navbar").innerHTML = navbar;
-//  */
+/*-----------------------------------------------------------Top BORDER- THis One in progress ---*/
+
+/* let topBorder =
+``
+document.getElementById("navbar").innerHTML = navbar;
+ */
 
 // /*--------------------------------------------------------------- BORDER- THis One Works ---*/
 
 // /* let topBorder = document.createElement("div");
 // `<div class="border">
-// <h3 class="teamName">mason</h3>
+// <h3 class="teamName">mariana</h3>
 // </div>` */
 
 // /*---------------------------------------------------------------FOOTER- THis One Works ---*/
