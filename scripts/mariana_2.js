@@ -1,3 +1,34 @@
+//.// /*--------------------Restaurant_2 Test_1------------ ---*/
+//menuID= [4, 5,6, 11],
+
+//const display_Table = () => {
+//     const tables = tablesCopy();
+
+//     for (let i = 0; i < menu.length; i++) {
+//         let item = menu.find((item) => item.id === tables[1].menuID);
+//         let MarianaTable = ``;
+
+//         MarianaTable += `<fieldset class=table>
+//         <legend>Table_${tables[1].id} </legend>
+//         <ul>`;
+//         MarianaTable += `
+// <li class="list">id: ${tables[1].id}</li>
+// <li class="list">menuID: ${tables[1].menuID}</li>
+// <li class="list">menuType: ${tables[1].menuType}</li> 
+// <li class="list">reservation: ${tables[1].reservation}</li>
+// <li class="list">orderStatus: ${tables[1].orderStatus}</li>
+// <li class="list">serverId: ${tables[1].serverId}</li>
+// <li class="list">guestsNumber: ${tables[1].guestsNumber}</li>
+// <li class="list">tipPercent: ${tables[1].tipPercent} %</li>`;
+//         MarianaTable += `</ul>
+// </fieldset>`;
+
+//         document.getElementById("mariana").innerHTML = MarianaTable;
+//     }
+//};
+
+display_Table();
+
 /*
 /* const htmlString = `<h1 class="h1">I am from JS</h1>
  
@@ -347,41 +378,41 @@ for (let table of tables) {
 
 /*---------------------------------------------------------------Add New Table- THis One Works ---*/
 
-const newTable = {
-    Reservation: false,
-    id: "New_Table",
-    Reservation_Date: "8 / 6 / 2022",
-    Reservation_Time: "05:00 pm",
-    Waiter_Name: "Elma",
-    Meal: "Lunch",
-    High_Chairs: false,
-    Guests_Number: 2,
-    Soup_Salad: true,
-    Alcohol_Drink: true,
-    Entree: "Stake",
-    Desert: "Ice Cream1",
-    Water: "Sparkling",
-    Order_Status: "Progress",
-    Price: 58.0,
-};
+// const newTable = {
+//     Reservation: false,
+//     id: "New_Table",
+//     Reservation_Date: "8 / 6 / 2022",
+//     Reservation_Time: "05:00 pm",
+//     Waiter_Name: "Elma",
+//     Meal: "Lunch",
+//     High_Chairs: false,
+//     Guests_Number: 2,
+//     Soup_Salad: true,
+//     Alcohol_Drink: true,
+//     Entree: "Stake",
+//     Desert: "Ice Cream1",
+//     Water: "Sparkling",
+//     Order_Status: "Progress",
+//     Price: 58.0,
+// };
 
 //New table
-for (const nTable of tables) {
-    for (const row in nTable) {
-        if (nTable[row] == "Completed") {
-            tables.push(newTable);
-            nTable == newTable;
-        }
-        //console.log(nTable[row]);
-    }
-}
+// for (const nTable of tables) {
+//     for (const row in nTable) {
+//         if (nTable[row] == "Completed") {
+//             tables.push(newTable);
+//             nTable == newTable;
+//         }
+//         //console.log(nTable[row]);
+//     }
+// }
 //console.log(tables);
-let totalPrice = 0;
-let tips = 0;
-for (const pTable of tables) {
-    totalPrice += pTable.Price;
-    tips = Math.round(totalPrice * 0.02);
-}
+// let totalPrice = 0;
+// let tips = 0;
+// for (const pTable of tables) {
+//     totalPrice += pTable.Price;
+//     tips = Math.round(totalPrice * 0.02);
+//}
 //console.log(totalPrice);
 //console.log(tips);
 
@@ -389,9 +420,25 @@ for (const pTable of tables) {
 /*----------------------------------------HTML_Preview-Price THis One Works ---*/
 //let table_4_price = tables[0].Price;
 //table_4_price = 0;
-for (const table of tables) {
-    console.log(table[1]);
-}
+// for (const table of tables) {
+//     console.log(table[1]);
+// }
 
 //console.log(tables[0].Entree);
- 
+/*----------------------------------------HTML_Preview-Price THis One Works ---*/
+
+const display_Table = () => {
+    let MarianaTable = ` `;
+    for (x in tables[1]) {
+        MarianaTable += `
+        <fieldset class=table>
+    <legend>Table_${tables[1].id} </legend>
+        <ul>
+        <li class =list>${x}</li>
+        </ul>
+    </fieldset>`;
+        console.log(x);
+    }
+    document.getElementById("mariana_2").innerHTML = MarianaTable;
+};
+display_Table();
