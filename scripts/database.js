@@ -13,12 +13,12 @@ const tables = [
     },
     {
         id: 2,
-        menuID: 4 /* [5,3,1] */,
+        menuID: [2,3,7,5,11],
         menuType: "lunch",
-        reservation: false,
+        reservation: false ,
         orderStatus: "complete",
         serverId: 2,
-        guestsNumber: 3,
+        guestsNumber: 4,
         tipPercent: 0.2,
     },
     {
