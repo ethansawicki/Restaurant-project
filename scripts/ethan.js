@@ -31,7 +31,7 @@ const render = () => {
                 renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                 renderToHTML += `<li>Order Entree(s):${ordersFunction()}</li>`
                 renderToHTML += `<li>Server: ${server.serverName}</li>`
-                renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2)}%`
+                renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2) * 100}%`
                 renderToHTML += `</ul>`
             }        
         }
