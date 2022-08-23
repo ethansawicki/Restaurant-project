@@ -51,8 +51,15 @@ for (const chaseTable of chaseTables) {
     `
 }
 
+let tipsTotal = 0;
+for (const table of chaseTables) {
+    tipsTotal += table.price * table.tipPercent;
+}
 
 document.getElementById('chase').innerHTML = chase;
+
+document.getElementById('chaseTips').innerHTML = `Total in Tips = <span class = "chaseTipsValue">$${tipsTotal.toFixed(2)}</span>`;
+console.log(chaseTips);
 
 
 

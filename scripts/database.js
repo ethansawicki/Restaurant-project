@@ -40,7 +40,7 @@ const tables = [
         orderStatus: "complete",
         serverId: 4,
         guestsNumber: 4,
-        tipPercent: 0.3,
+        tipPercent: 0.2,
     },
     {
         id: 5,
@@ -84,12 +84,12 @@ const tables = [
     },
     {
         id: 9,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuID: [2, 10, 15, 4],
+        menuType: "lunch",
         reservation: true,
         orderStatus: "complete",
         serverId: 4,
-        guestsNumber: 0,
+        guestsNumber: 2,
         tipPercent: 0.2
     },
     {
@@ -144,12 +144,12 @@ const tables = [
     },
     {
         id: 15,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuID: [13, 7, 13, 7, 13, 7, 13, 7],
+        menuType: "dinner",
         reservation: true,
         orderStatus: "complete",
         serverId: 4,
-        guestsNumber: 0,
+        guestsNumber: 4,
         tipPercent: 0.2
     }
 ];
