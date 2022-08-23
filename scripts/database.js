@@ -33,13 +33,13 @@ const tables = [
     },
     {
         id: 4,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuID: [3, 11, 6, 11, 6, 11, 6, 11],
+        menuType: "lunch",
         reservation: true,
         orderStatus: "complete",
         serverId: 4,
-        guestsNumber: 0,
-        tipPercent: 0.2,
+        guestsNumber: 4,
+        tipPercent: 0.3,
     },
     {
         id: 5,
