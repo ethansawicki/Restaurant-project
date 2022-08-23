@@ -23,12 +23,13 @@ const tables = [
     },
     {
         id: 3,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuID: [7, 8, 9],
+        drinkID: [11,11,11],
+        menuType: "dinner",
         reservation: true,
         orderStatus: "complete",
         serverId: 3,
-        guestsNumber: 0,
+        guestsNumber: 3,
         tipPercent: 0.2,
     },
     {
@@ -178,7 +179,7 @@ export const menuCopy = () => {
 };
 
 export const serversCopy = () => {
-    return servers.map((server) => ({ ...server }));
-};
+    return servers.map(server => ({...server}))
+}
 
 

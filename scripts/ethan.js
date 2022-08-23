@@ -1,86 +1,35 @@
-const tables = [
-    {
-        id: 1,
-        table: 1,
-        reservation: false,
-        reservationDate: "N/A"
-    },
-    {
-        id: 2,
-        table: 2,
-        reservation: true,
-        reservationDate: "08/08/2022"
-    },
-    {
-        id: 3,
-        table: 3,
-        reservation: false,
-        reservationDate: "N/A"
-    }
-]
-const orders = [
-    {
-        id: 1,
-        tableID: 2,
-        partyOf: 4,
-        mealType: "Dinner",
-        appetizer: true,
-        entree: ["Steak", " Fish", " Burger", " Salad"],
-        dessert: "Pie",
-        drink: "Yes Please",
-        tip: 20
-    },
-    {
-        id: 2,
-        tableID: 3,
-        partyOf: 2,
-        mealType: "Dinner",
-        appetizer: true,
-        entree: ["Fish", " Salad"],
-        dessert: "Creme Brulee",
-        drink: ["Tea", " Water"],
-        tip: 10
-    },
-    {
-        id: 3,
-        tableID: 1,
-        partyOf: 1,
-        mealType: "Lunch",
-        appetizer: false,
-        entree: "Chicken",
-        dessert: "N/A",
-        drink: "Coke",
-        tip: 18
-    }
-]
+import { menuCopy, tablesCopy, serversCopy } from "./database.js"
 
-let renderToHTML = `<section class="ethan-section">`
-
-orders.sort((order) => {
-    if(order.tableID > 2) {
-       return 1
-    } if(order.tableID < 2) {
-        return -2
-    }
-})
-
-for (const order of orders) {
-    for (const table of tables) {
-        if(table.table === order.tableID) {
-            renderToHTML += `<ul class="ethan-list">`
-            renderToHTML += `<h3 class="ethan-table">Table: ${table.table}</h3>`
-            renderToHTML += `<li>Party Of: ${order.partyOf}</li>`
-            renderToHTML += `<li>Table Reservation Date: ${table.reservationDate}</li>`
-            renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
-            renderToHTML += `<li>Order Appetizer: ${order.appetizer}</li>`
-            renderToHTML += `<li>Order Entree(s): ${order.entree}</li>`
-            renderToHTML += `<li>Order Dessert: ${order.dessert}</li>`
-            renderToHTML += `<li>Order Drink: ${order.drink}</li>`
-            renderToHTML += `<li>Tip: ${order.tip.toFixed(2)}%`
-            renderToHTML += `</ul>`
-        }    
-    }
+const ordersFunction = () => {
+    const tableOrder = []
+    const menus = menuCopy().filter(menu => {if(menu.type === 'dinner'){return tableOrder.push(menu.menuItem)}})
+    return tableOrder
 }
-renderToHTML += `</section>`
 
-document.querySelector('#ethan').innerHTML = renderToHTML
+const render = () => {
+    const tables = tablesCopy().filter(table => {if(table.serverId === 3){return table}})
+    const servers = serversCopy().filter(server => {if(server.id === 3){return server}})
+    const appElement = document.querySelector('#ethan')
+    let renderToHTML = `<section class="ethan-section">`
+    for (const server of servers) {
+        for (const table of tables) {
+            if(server.id === table.serverId) {
+                renderToHTML += `<ul class="ethan-list">`
+                renderToHTML += `<h3 class="ethan-table">Table: ${table.id}</h3>`
+                renderToHTML += `<li>Party Of: ${table.guestsNumber}</li>`
+                renderToHTML += `<li>Table Reservation Date: ${Date()}</li>`
+                renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
+                renderToHTML += `<li>Order Entree(s):${ordersFunction()}</li>`
+                renderToHTML += `<li>Server: ${server.serverName}</li>`
+                renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2)}%`
+                renderToHTML += `</ul>`
+            }        
+        }
+    }
+    renderToHTML += `</section>`
+    return appElement.innerHTML = renderToHTML
+}
+
+render()
+
+// Need to see if theres a better way to do this
