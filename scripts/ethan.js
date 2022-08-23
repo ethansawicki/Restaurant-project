@@ -1,10 +1,17 @@
 import { menuCopy, tablesCopy, serversCopy } from "./database.js"
 
-//is there a way to render the options without pushing to a new array?
+//is there a better way to do this?
 const ordersFunction = () => {
     const orders = []
-    const menus = menuCopy().filter(menu => {if(menu.type === 'dinner'){return orders.push(menu.menuItem)}})
+    const menus = menuCopy().filter(menu => {if(menu.type === 'dinner'){return orders.push(" " + menu.menuItem)}})
     return orders
+}
+
+const totalFunction = () => {
+    const totalsArray = []
+    const menus = menuCopy().filter(menu => {if(menu.type === 'dinner'){return totalsArray.push(menu.price)}})
+    const total = totalsArray.reduce((total, order) => total + order, 0)
+    return total
 }
 
 const tablesFunction = () => {
@@ -31,6 +38,7 @@ const render = () => {
                 renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                 renderToHTML += `<li>Order Entree(s):${ordersFunction()}</li>`
                 renderToHTML += `<li>Server: ${server.serverName}</li>`
+                renderToHTML += `<li>Total: $${totalFunction()}</li>`
                 renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2) * 100}%`
                 renderToHTML += `</ul>`
             }        
@@ -39,7 +47,7 @@ const render = () => {
     renderToHTML += `</section>`
     return appElement.innerHTML = renderToHTML
 }
-
+console.log(totalFunction())
 render()
 
 // Need to see if theres a better way to do this
