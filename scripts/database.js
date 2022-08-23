@@ -50,8 +50,108 @@ const tables = [
         orderStatus: "complete",
         serverId: 5,
         guestsNumber: 0,
-        tipPercent: 0.2,
+        tipPercent: 0.2
     },
+    {
+        id: 6,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 2,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 7,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 2,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 8,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 1,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 9,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 4,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 10,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 5,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 11,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 1,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 12,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 3,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 13,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 5,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 14,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 3,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    },
+    {
+        id: 15,
+        menuID: [0, 0, 0],
+        menuType: "breakfast",
+        reservation: true,
+        orderStatus: "complete",
+        serverId: 4,
+        guestsNumber: 0,
+        tipPercent: 0.2
+    }
 ];
 
 const menu = [
@@ -89,7 +189,7 @@ const menu = [
         id: 6,
         type: "lunch",
         menuItem: "Grilled Steak",
-        price: 420,
+        price: 400,
     },
     {
         id: 7,
@@ -101,7 +201,7 @@ const menu = [
         id: 8,
         type: "dinner",
         menuItem: "Salmon and Yellow Rice",
-        price: 69,
+        price: 74,
     },
     {
         id: 9,
@@ -123,25 +223,25 @@ const menu = [
     },
     {
         id: 12,
-        type: "drinks",
+        type: "drink",
         menuItem: "Buffalo Trace",
         price: 5,
     },
     {
         id: 13,
-        type: "drinks",
+        type: "drink",
         menuItem: "Coors Light",
         price: 20,
     },
     {
         id: 14,
-        type: "drinks",
+        type: "drink",
         menuItem: "Old Fashioned",
         price: 1,
     },
     {
         id: 15,
-        type: "drinks",
+        type: "drink",
         menuItem: "Red Blend",
         price: 60,
     },

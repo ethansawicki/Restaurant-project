@@ -109,6 +109,27 @@ a:hover {
     background-color: #d9d9d9;
 }
 
+#menuLink {
+    display: block;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(83, 83, 83);
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 3.2em;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: color 0.5s;
+}
+
+#menuLink:hover {
+    background-color: #f5b096;
+    color: white;
+}
+
 .footer {
     width: 100vw;
     height: 70px;
