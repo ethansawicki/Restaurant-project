@@ -23,7 +23,8 @@ const tables = [
     },
     {
         id: 3,
-        menuID: [7, 8, 9, 11, 11, 11],
+        menuID: [7, 8, 9],
+        drinkID: [11,11,11],
         menuType: "dinner",
         reservation: true,
         orderStatus: "complete",
