@@ -38,7 +38,7 @@ const servers = serversCopy();
 
 // display_Table();
 
-// //.// /*----------Table_2----------Restaurant_2 Test_1--------Works!!!!---- ---*/
+// //.// /*----------Table_2----------Restaurant_2 Test_1-one_order-------Works!!!!---- ---*/
 // const display_Table = () => {
 //     for (let i = 0; i < menu.length; i++) {
 //         let itemM = menu.find((itemM) => itemM.id === tables[1].menuID);
@@ -77,8 +77,6 @@ const servers = serversCopy();
 
 // display_Table();
 
-// tables[1].menuID_2.push()
-
 //.// /*----------Table_2----------Restaurant_2 Test_2  more orders--------Works!!!!---- ---*/
 const display_Table = () => {
     for (let i = 0; i < menu.length; i++) {
@@ -94,8 +92,7 @@ const display_Table = () => {
         }
         /* -----------orders/price------------ */
 
-
-        /* -----------order_status------------ */    
+        /* -----------order_status------------ */
 
         //(object.hasOwnProperty(property)
 
@@ -106,15 +103,23 @@ const display_Table = () => {
         //         }
         //     }
         // }
-        /* -----------reservation------------ */    
+        /* -----------reservation------------ */
 
-        /*  let message = ``;
-        if ((tables[1].reservation == true)) {
-            return message = `<span> -Reservations have been made.</span>`;
+        // let message = ``;
+        // if (tables[1].reservation == true) {
+        //     message = `<br><span> -Reservations have been made.</span>`;
+        // }
+        // if (tables[1].reservation == false) {
+        //     message = `<br><span> -No reservations have been made.</span>`;
+        // }
+
+        let message = ``;
+        if (tables[1].reservation) {
+            message = `<br><span> - Reservations have been made.</span>`;
+        } else {
+            message = `<br><span> - No reservations have been made.</span>`;
         }
-        if ((tables[1].reservation == false)) {
-            return message = `<br><span> -No reservations have been made.</span>`;
-        } */
+
         // tables[1].reservation = false ? message2 : message1
         /* -----------reservation------------ */
         // for (const x of tables[1]) {
@@ -144,12 +149,14 @@ const display_Table = () => {
     <li class="list">TABLE ID: ${tables[1].id}</li>
     <li class="list">ORDERS: ${meals} </li> 
     <li class="list">MEAL: ${tables[1].menuType} </li> 
-    <li class="list">RESERVATION: ${tables[1].reservation}</li>   
+    <li class="list">RESERVATION: ${message}</li>   
     <li class="list">ORDER STATUS: ${tables[1].orderStatus}</li> 
     <li class="list">SERVER: ${serverM.serverName}</li>
     <li class="list">GUSTS NUMBER: ${tables[1].guestsNumber}</li>
     <li class="list">TOTAL/TIPS:
-    <br> -TIPS : $${tips} (2%) <br> - TOTAL before tips : $${prices} <br> - TOTAL after tips : $${prices + tips}
+    <br> -TIPS : $${tips} (2%) <br> - TOTAL before tips : $${prices} <br> - TOTAL after tips : $${
+            prices + tips
+        }
     </li>`;
         MarianaTable += `
         </ul></fieldset>`;
