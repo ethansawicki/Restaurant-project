@@ -25,9 +25,9 @@
 
 //         document.getElementById("mariana").innerHTML = MarianaTable;
 //     }
-//};
+// //};
 
-display_Table();
+// display_Table();
 
 /*
 /* const htmlString = `<h1 class="h1">I am from JS</h1>
