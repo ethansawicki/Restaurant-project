@@ -13,33 +13,34 @@ const tables = [
     },
     {
         id: 2,
-        menuID: 4 /* [5,3,1] */,
+        menuID: [2,3,7,5,11],
         menuType: "lunch",
-        reservation: false,
+        reservation: false ,
         orderStatus: "complete",
         serverId: 2,
-        guestsNumber: 3,
-        tipPercent: 0.2
+        guestsNumber: 4,
+        tipPercent: 0.2,
     },
     {
         id: 3,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuID: [7, 8, 9],
+        drinkID: [11,11,11],
+        menuType: "dinner",
         reservation: true,
         orderStatus: "complete",
         serverId: 3,
-        guestsNumber: 0,
-        tipPercent: 0.2
+        guestsNumber: 3,
+        tipPercent: 0.2,
     },
     {
         id: 4,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuID: [3, 11, 6, 11, 6, 11, 6, 11],
+        menuType: "lunch",
         reservation: true,
         orderStatus: "complete",
         serverId: 4,
-        guestsNumber: 0,
-        tipPercent: 0.2
+        guestsNumber: 4,
+        tipPercent: 0.3,
     },
     {
         id: 5,
@@ -278,7 +279,7 @@ export const menuCopy = () => {
 };
 
 export const serversCopy = () => {
-    return servers.map((server) => ({ ...server }));
-};
+    return servers.map(server => ({...server}))
+}
 
 

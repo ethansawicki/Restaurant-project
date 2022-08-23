@@ -5,7 +5,7 @@ const menu = menuCopy();
 import { serversCopy } from "./database.js";
 const servers = serversCopy();
 //.
-// /*-------------Table_2-------Restaurant_2 Test_6-------Works!!!!----- ---*/
+// /*-------------Table_2-------Restaurant_2 Test_1-------Works!!!!----- ---*/
 // const display_Table = () => {
 //     let MarianaTable = ` `;
 //     MarianaTable = `<fieldset class=table>
@@ -20,7 +20,7 @@ const servers = serversCopy();
 // };
 // display_Table();
 
-//.// /*------------Table_2--------Restaurant_2 Test_1-------Works!!!!----- ---*/
+//.// /*------------Table_2--------Restaurant_2 Test_2-------Works!!!!----- ---*/
 // const display_Table = () => {
 //     const tables = tablesCopy();
 //     let MarianaTable = ``;
@@ -38,18 +38,102 @@ const servers = serversCopy();
 
 // display_Table();
 
-//.// /*----------Table_2----------Restaurant_2 Test_1--------Works!!!!---- ---*/
+// //.// /*----------Table_2----------Restaurant_2 Test_1--------Works!!!!---- ---*/
+// const display_Table = () => {
+//     for (let i = 0; i < menu.length; i++) {
+//         let itemM = menu.find((itemM) => itemM.id === tables[1].menuID);
+//         let serverM = servers.find(
+//             (serverM) => serverM.id === tables[1].serverId
+//         );
+//         let totalPrices = menu.find(
+//             (priceItemM) => priceItemM.id === tables[1].menuID
+//         );
+//         totalPrices = totalPrices.price;
+//         let tips = totalPrices * 0.2;
+//         let MarianaTable = ``;
+
+//         MarianaTable += `
+//         <fieldset class=table>
+//         <legend>Table_${tables[1].id} </legend>
+//         <ul>`;
+//         MarianaTable += `
+//     <li class="list">id: ${tables[1].id}</li>
+//     <li class="list">menuID: ${itemM.menuItem} $${totalPrices}</li>
+//     <li class="list">menuType: ${tables[1].menuType}</li>
+//     <li class="list">reservation: ${tables[1].reservation}</li>
+//     <li class="list">orderStatus: ${tables[1].orderStatus}</li>
+//     <li class="list">serverId: ${serverM.serverName}</li>
+//     <li class="list">guestsNumber: ${tables[1].guestsNumber}</li>
+//     <li class="list">tipPercent: $${tips}.00    (2%)</li>`;
+//         MarianaTable += `
+//         </ul></fieldset>`;
+
+//         let xTips = `<div">Total Price: $${totalPrices}.00 && Tips: $${tips}.00</div>`;
+//         /* -----------Tips------------ */
+//         document.getElementById("mPrices").innerHTML = xTips;
+//         document.getElementById("mariana").innerHTML = MarianaTable;
+//     }
+// };
+
+// display_Table();
+
+// tables[1].menuID_2.push()
+
+//.// /*----------Table_2----------Restaurant_2 Test_2  more orders--------Works!!!!---- ---*/
 const display_Table = () => {
     for (let i = 0; i < menu.length; i++) {
-        let itemM = menu.find((itemM) => itemM.id === tables[1].menuID);
+        /* -----------orders/price------------ */
+        let meals = "";
+        let prices = 0;
+        let tips = 0;
+        for (let x of tables[1].menuID) {
+            let item = menu.find((y) => y.id === x);
+            meals += `<br><span> - ${item.menuItem} $${item.price}</span>`;
+            prices += item.price;
+            tips = prices * 0.2;
+        }
+        /* -----------orders/price------------ */
+
+
+        /* -----------order_status------------ */    
+
+        //(object.hasOwnProperty(property)
+
+        // for (const nTable of tables) {
+        //     for (const row in nTable) {
+        //         if (nTable[row] == "Completed") {
+        //             tables.push(newTable);
+        //         }
+        //     }
+        // }
+        /* -----------reservation------------ */    
+
+        /*  let message = ``;
+        if ((tables[1].reservation == true)) {
+            return message = `<span> -Reservations have been made.</span>`;
+        }
+        if ((tables[1].reservation == false)) {
+            return message = `<br><span> -No reservations have been made.</span>`;
+        } */
+        // tables[1].reservation = false ? message2 : message1
+        /* -----------reservation------------ */
+        // for (const x of tables[1]) {
+        //     for (let y of x) {
+        //         if (x[y] == true) {
+        //             let message = "";
+        //             return (message = `<span> -Reservations have been made.</span>`);
+        //         } else {
+        //             return (message = `<br><span> -No reservations have been made.</span>`);
+        //         }
+        //     }
+        // /* -----------reservation------------ */
+
+        /* -----------server------------ */
         let serverM = servers.find(
             (serverM) => serverM.id === tables[1].serverId
         );
-        let totalPrices = menu.find(
-            (priceItemM) => priceItemM.id === tables[1].menuID
-        );
-        totalPrices = totalPrices.price;
-        let tips = totalPrices * 0.2;
+        /* -----------server------------ */
+
         let MarianaTable = ``;
 
         MarianaTable += `
@@ -57,28 +141,29 @@ const display_Table = () => {
         <legend>Table_${tables[1].id} </legend>
         <ul>`;
         MarianaTable += `
-    <li class="list">id: ${tables[1].id}</li>
-    <li class="list">menuID: ${itemM.menuItem} $${totalPrices}</li>
-    <li class="list">menuType: ${tables[1].menuType}</li> 
-    <li class="list">reservation: ${tables[1].reservation}</li>
-    <li class="list">orderStatus: ${tables[1].orderStatus}</li> 
-    <li class="list">serverId: ${serverM.serverName}</li>
-    <li class="list">guestsNumber: ${tables[1].guestsNumber}</li>
-    <li class="list">tipPercent: $${tips}.00    (2%)</li>`;
+    <li class="list">TABLE ID: ${tables[1].id}</li>
+    <li class="list">ORDERS: ${meals} </li> 
+    <li class="list">MEAL: ${tables[1].menuType} </li> 
+    <li class="list">RESERVATION: ${tables[1].reservation}</li>   
+    <li class="list">ORDER STATUS: ${tables[1].orderStatus}</li> 
+    <li class="list">SERVER: ${serverM.serverName}</li>
+    <li class="list">GUSTS NUMBER: ${tables[1].guestsNumber}</li>
+    <li class="list">TOTAL/TIPS:
+    <br> -TIPS : $${tips} (2%) <br> - TOTAL before tips : $${prices} <br> - TOTAL after tips : $${prices + tips}
+    </li>`;
         MarianaTable += `
         </ul></fieldset>`;
-
-        let xTips = `<div">Total Price: $${totalPrices}.00 && Tips: $${tips}.00</div>`;
-        /* -----------Tips------------ */
-        document.getElementById("mPrices").innerHTML = xTips;
         document.getElementById("mariana").innerHTML = MarianaTable;
+
+        /* -----------Tips------------ */
+        prices = `<div>Total Price: <b> $${prices}</b> && Tips: <b> $${tips}</b> </div>`;
+        document.getElementById("mPrices").innerHTML = prices;
     }
 };
 
 display_Table();
-
 /* ----------------Restaurant_Part_1----------------------- */
-// /*---------------------------------------------------------------NAV_BAR- THis One Works ---*/
+// /*----------------------------------------------------------NAV_BAR- THis One Works!! ---*/
 let navbar = `<section class="nav">
 <ul class="navBar">
     <a href="#ethan"><li class="navList">ETHAN</li></a>
@@ -94,7 +179,7 @@ document.getElementById("navbar").innerHTML = navbar;
 let logo = `<img class="img-logo" src="/img_Style/Logo.jpg" alt="restaurant Logo" />`;
 document.getElementById("logo").innerHTML = logo;
 
-/*-----------------------------------------------------------Top BORDER- THis One in progress ---*/
+/*-------------------------------------------------------Top BORDER- THis One in progress ---*/
 
 /* let topBorder =
 ``
@@ -211,7 +296,7 @@ document.getElementById("navbar").innerHTML = navbar;
 // }
 // //console.log(tables);
 
-// /*----------------------------------------------------------------FOOD_PRICE- THis One Works ---*/
+// /*---------------------------------------------------------------FOOD_PRICE- THis One Works ---*/
 
 // let Total_Price = ``;
 // let totalPrice = 0;
@@ -221,7 +306,7 @@ document.getElementById("navbar").innerHTML = navbar;
 //     tips = Math.round(totalPrice * 0.02);
 // }
 
-// /*--------------------------------------------------------------HTML_Preview-Price THis One Works ---*/
+// /*--------------------------------------------------------HTML_Preview-Price THis One Works ---*/
 
 // //console.log(totalPrice);
 // //console.log(tips);
@@ -239,7 +324,7 @@ document.getElementById("navbar").innerHTML = navbar;
 // }
 // document.getElementById("mariana").innerHTML = MarianaTable;
 
-// /*--------------------------------------------------------------HTML_Preview-Price THis One is on progress ---*/
+// /*--------------------------------------------HTML_Preview-Price THis One is on progress ---*/
 // /* let table_4_price = tables[0].Price;
 // table_4_price = 0;
 // for (const meal of tables[0]) {
