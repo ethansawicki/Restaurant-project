@@ -1,6 +1,6 @@
 import { menuCopy, tablesCopy, serversCopy } from "./database.js"
 
-//is there a better way to do this?
+// There has to be a better way to do this
 const dinnerFunction = () => {
     const orders = []
     const menus = menuCopy().filter(menu => {if(menu.type === 'dinner'){return orders.push(" " + menu.menuItem)}})
@@ -8,14 +8,14 @@ const dinnerFunction = () => {
 }
 
 const breakfastFunction = () => {
-    const orders = []
-    const menus = menuCopy().filter(menu => {if(menu.id === 3){return orders.push(" " + menu.menuItem)}})
-    return orders
+    const ordersArray = []
+    const menus = menuCopy().filter(menu => {if(menu.id === 3){return ordersArray.push(" " + menu.menuItem)}})
+    return ordersArray
 }
 
 const lunchFunction = () => {
     const orders = []
-    const menus = menuCopy().filter(menu => {if(menu.type === 'lunch'){return orders.push(" "+ menu.menuItem)}})
+    const menus = menuCopy().filter(menu => {if(menu.type === 'lunch'){return orders.push(" " + menu.menuItem)}})
     orders.pop()
     return orders
 }
@@ -51,7 +51,7 @@ const serversFunction = () => {
     const servers = serversCopy().filter(server => {if(server.id === 3){return server}})
     return servers
 }
-
+// This feels like alot for a function
 const render = () => {
     let reservation = ""
     const appElement = document.querySelector('#ethan')
@@ -106,7 +106,7 @@ const render = () => {
     renderToHTML += `</section>`
     return appElement.innerHTML = renderToHTML
 }
-console.log(totalDinnerFunction())
+
 render()
 
 // Need to see if theres a better way to do this
