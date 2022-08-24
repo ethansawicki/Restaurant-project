@@ -216,3 +216,9 @@ a:hover {
   .money {
     color: green;
   }
+
+  .changes {
+    color: black;
+    font-family: 'Square Peg', cursive;
+    font-size: larger;
+  }
