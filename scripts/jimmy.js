@@ -1,3 +1,77 @@
+// extracts from datascript javascript file thru import/export
+import { tablesCopy } from "./database.js";
+const tables = tablesCopy();
+
+import {menuCopy} from "./database.js";
+const menu = menuCopy();
+
+import {serversCopy} from "./database.js";
+const servers = serversCopy();
+
+// my tables
+const jimmyTables = tables.filter(table => table.serverId === 5);
+
+
+for (const table of jimmyTables) {
+        table.order = [];
+        for(const order of table.menuID) {
+            for (const item of menu ) {
+                if(order === item.id) {
+                    table.order.push(item.menuItem);
+                    }
+                }
+        }
+}
+
+
+for (const table of jimmyTables) {
+    table.price = 0;
+    for (const order of table.menuID) {
+        for (const item of menu) {
+            if (order === item.id){
+                table.price += item.price;
+            }
+         }
+    }
+}
+
+
+let jimmy = '';
+for (const jimmyTable of jimmyTables) {
+    jimmy += `
+    <fieldset class="table"><legend>Table ${jimmyTable.id}</legend>
+        <ul>
+                <li> Guests: ${jimmyTable.guestsNumber}</li>
+                <li> Reservation: ${jimmyTable.reservation}</li>
+                <li> MenuType: ${jimmyTable.menuType}</li>
+                <li> Order:<br><span class="jimmyColors"> ${jimmyTable.order.join('<br>')}</span></li>
+                <li> Order Status: ${jimmyTable.orderStatus}</li>
+                <li> Price: ${jimmyTable.price}</li>
+                <li> Tip: ${jimmyTable.tipPercent * 90}%</li>
+        </ul>
+        </fieldset>
+    `
+}
+
+
+document.getElementById('jimmy').innerHTML = jimmy;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Part 1 
 const tables = [
     {   
         id: 10,
@@ -53,7 +127,7 @@ for (let table of tables) {
     jimtable += `</ul>  </fieldset>`;
 }
 document.getElementById("jimmy").innerHTML = jimtable;
-*/
+
 
 
 
@@ -67,3 +141,4 @@ for (const table of tables) {
 }
 
 document.getElementById('jimmy').innerHTML = jimmy;
+*/

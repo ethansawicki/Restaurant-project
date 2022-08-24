@@ -208,3 +208,7 @@ a:hover {
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(128, 98, 91);
   }
+
+  .jimmyColors {
+    color: black;
+  }
