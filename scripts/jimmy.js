@@ -47,7 +47,7 @@ for (const jimmyTable of jimmyTables) {
                 <li> Order: <br><span class="jimmyColors"> ${jimmyTable.order.join('<br>')}</span></li>
                 <li> Order Status: <span class="money"> ${jimmyTable.orderStatus}</span></li>
                 <li> Price: <span class="money"> $${jimmyTable.price}</span></li>
-                <li> Tip: ${jimmyTable.tipPercent * 90}%</li>
+                <li> Tip: 0% <span class="changes">ur rude so no tip,<br> but ur cute so here's my number 615-888-8888</span></li>
         </ul>
         </fieldset>
     `
