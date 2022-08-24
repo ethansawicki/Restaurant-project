@@ -44,12 +44,12 @@ const tables = [
     },
     {
         id: 5,
-        menuID: [0, 0, 0],
+        menuID: [2, 1, 16],
         menuType: "breakfast",
         reservation: true,
         orderStatus: "complete",
         serverId: 5,
-        guestsNumber: 0,
+        guestsNumber: 1,
         tipPercent: 0.2
     },
     {
@@ -245,6 +245,13 @@ const menu = [
         menuItem: "Red Blend",
         price: 60,
     },
+
+    {
+        id: 16,
+        type: "drink",
+        menuItem: "Coffee",
+        price: 5
+    },   
 ];
 
 const servers = [
