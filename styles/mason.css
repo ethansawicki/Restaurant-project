@@ -43,6 +43,15 @@
     flex-wrap: wrap;
 }
 
-.masonValue {
+.masonTableValue {
     color: rgb(31, 31, 197);
+}
+
+.masonTableKey {
+    border-bottom: 1px solid rgb(151, 151, 151);
+    padding: 0 10px;
+}
+
+.orders {
+    color: rgb(230, 36, 36);
 }
