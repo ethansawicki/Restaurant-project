@@ -105,32 +105,12 @@ const display_Table = () => {
         // }
         /* -----------reservation------------ */
 
-        // let message = ``;
-        // if (tables[1].reservation == true) {
-        //     message = `<br><span> -Reservations have been made.</span>`;
-        // }
-        // if (tables[1].reservation == false) {
-        //     message = `<br><span> -No reservations have been made.</span>`;
-        // }
-
         let message = ``;
         if (tables[1].reservation) {
             message = `<br><span> - Reservations have been made.</span>`;
         } else {
             message = `<br><span> - No reservations have been made.</span>`;
         }
-
-        // tables[1].reservation = false ? message2 : message1
-        /* -----------reservation------------ */
-        // for (const x of tables[1]) {
-        //     for (let y of x) {
-        //         if (x[y] == true) {
-        //             let message = "";
-        //             return (message = `<span> -Reservations have been made.</span>`);
-        //         } else {
-        //             return (message = `<br><span> -No reservations have been made.</span>`);
-        //         }
-        //     }
         // /* -----------reservation------------ */
 
         /* -----------server------------ */
@@ -346,3 +326,36 @@ document.getElementById("navbar").innerHTML = navbar;
 //  */
 
 // //document.getElementById("mPrice").innerHTML = totalPrice;
+//.//.//.
+//.
+//.
+//.
+//.
+//.
+//.
+/* -------------------RESTAURANT-PART-2------TABLES[2,6,7]---------------------- */
+// for (let tableM of tables) {
+//     if ((tableM.id == 2) | (tableM.id == 6) | (tableM.id == 7)) {
+//         let marianaTables = [];
+//         marianaTables += marianaTables.push(tableM);
+//         console.log(marianaTables)
+//     }
+// }
+
+// let assigendTable=``
+// let marianaTables = [2, 6, 7]
+// for (let i = 0; i < tables.length; i++) {
+//     for (let T of marianaTables) {
+//         let item=marianaTables.find(table.)
+
+// }
+
+// for (let tableM of tables) {
+//     // if (tableM.id === 2 && tableM.id === 6 && tableM.id === 7) {
+//     //     marianaTables += marianaTables.push(tableM);
+//     //     return marianaTables;
+//     // }
+//     let marianaTables = tables.find(table => table.id===2)
+//     // console.log(marianaTables);
+// }
+// //let car = cars.find(car => car.color === "red");
