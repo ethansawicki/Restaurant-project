@@ -116,10 +116,10 @@ const tables = [
         id: 12,
         menuID: [0, 0, 0],
         menuType: "breakfast",
-        reservation: true,
+        reservation: false,
         orderStatus: "complete",
         serverId: 3,
-        guestsNumber: 0,
+        guestsNumber: 1,
         tipPercent: 0.2
     },
     {
@@ -135,11 +135,11 @@ const tables = [
     {
         id: 14,
         menuID: [0, 0, 0],
-        menuType: "breakfast",
+        menuType: "lunch",
         reservation: true,
         orderStatus: "complete",
         serverId: 3,
-        guestsNumber: 0,
+        guestsNumber: 2,
         tipPercent: 0.2
     },
     {
