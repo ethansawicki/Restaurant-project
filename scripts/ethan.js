@@ -53,17 +53,24 @@ const serversFunction = () => {
 }
 
 const render = () => {
-    const reservation = new Date(Date.now())
+    let reservation = ""
     const appElement = document.querySelector('#ethan')
     let renderToHTML = `<section class="ethan-section">`
     for (const server of serversFunction()) {
         for (const table of tablesFunction()) {
             if(server.id === table.serverId) {
+                if(table.reservation === true) {
+                    table.reservation = "yes"
+                    reservation = new Date(Date.now()).toLocaleDateString('en-US')
+                } else {
+                    table.reservation = "No"
+                    reservation = "N/A"
+                }
                 if(table.menuType === 'breakfast') {
                     renderToHTML += `<ul class="ethan-list">`
                     renderToHTML += `<h3 class="ethan-table">Table: ${table.id}</h3>`
                     renderToHTML += `<li>Party Of: ${table.guestsNumber}</li>`
-                    renderToHTML += `<li>Table Reservation Date: ${reservation.toLocaleDateString('en-US')}</li>`
+                    renderToHTML += `<li>Table Reservation Date: ${reservation}</li>`
                     renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                     renderToHTML += `<li>Order Entree(s):${breakfastFunction()}</li>`
                     renderToHTML += `<li>Server: ${server.serverName}</li>`
@@ -74,7 +81,7 @@ const render = () => {
                     renderToHTML += `<ul class="ethan-list">`
                     renderToHTML += `<h3 class="ethan-table">Table: ${table.id}</h3>`
                     renderToHTML += `<li>Party Of: ${table.guestsNumber}</li>`
-                    renderToHTML += `<li>Table Reservation Date: ${reservation.toLocaleDateString('en-US')}</li>`
+                    renderToHTML += `<li>Table Reservation Date: ${reservation}</li>`
                     renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                     renderToHTML += `<li>Order Entree(s):${dinnerFunction()}</li>`
                     renderToHTML += `<li>Server: ${server.serverName}</li>`
@@ -85,7 +92,7 @@ const render = () => {
                     renderToHTML += `<ul class="ethan-list">`
                     renderToHTML += `<h3 class="ethan-table">Table: ${table.id}</h3>`
                     renderToHTML += `<li>Party Of: ${table.guestsNumber}</li>`
-                    renderToHTML += `<li>Table Reservation Date: ${reservation.toLocaleDateString('en-US')}</li>`
+                    renderToHTML += `<li>Table Reservation Date: ${reservation}</li>`
                     renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                     renderToHTML += `<li>Order Entree(s):${lunchFunction()}</li>`
                     renderToHTML += `<li>Server: ${server.serverName}</li>`
