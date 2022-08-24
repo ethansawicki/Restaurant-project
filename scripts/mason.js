@@ -48,7 +48,7 @@ const displayTableInfo = () => {
             <fieldset class="masonTable"><legend class="masonLegend">Table ${masonTable.id}</legend>
                 <ul class="masonList">
                     <li>Guests: <span class="masonTableValue">${masonTable.guestsNumber}</span></li>
-                    <li>Revervation: <span class="masonTableValue">${masonTable.reservation}</span></li>
+                    <li>Reservation: <span class="masonTableValue">${masonTable.reservation}</span></li>
                     <li>Menu: <span class="masonTableValue">${masonTable.menuType}</span></li>
                     <li><span class="masonTableKey">Order</span><span class="masonTableValue orders"><br>${masonTable.order.join('<br>')}</span></li>
                     <li>Order Status: <span class="masonTableValue">${masonTable.orderStatus}</span></li>
