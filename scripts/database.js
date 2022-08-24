@@ -1,21 +1,19 @@
 const tables = [
     {
-
-        id: 1 ,
-        menuID: [10 ,10 , 12, 5, 6, 6],
+        id: 1,
+        menuID: [10, 10, 12, 5, 6, 6],
         menuType: "lunch",
         reservation: true,
         orderStatus: "IN PROGRESS",
         serverId: 1,
         guestsNumber: 3,
-        tipPercent: 0.1
-
+        tipPercent: 0.1,
     },
     {
         id: 2,
-        menuID: [2,3,7,5,11],
+        menuID: [1, 3, 7, 5, 11],
         menuType: "lunch",
-        reservation: false ,
+        reservation: true,
         orderStatus: "complete",
         serverId: 2,
         guestsNumber: 4,
@@ -24,7 +22,7 @@ const tables = [
     {
         id: 3,
         menuID: [7, 8, 9],
-        drinkID: [11,11,11],
+        drinkID: [11, 11, 11],
         menuType: "dinner",
         reservation: true,
         orderStatus: "complete",
