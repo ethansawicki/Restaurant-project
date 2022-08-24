@@ -22,23 +22,26 @@ const lunchFunction = () => {
 
 const totalDinnerFunction = () => {
     const totalsArray = []
+    let total = 0
     const menus = menuCopy().filter(menu => {if(menu.type === 'dinner'){return totalsArray.push(menu.price)}})
-    const total = totalsArray.reduce((total, order) => total + order, 0)
+    total += totalsArray.reduce((total, order) => total + order, 0)
     return total
 }
 
 const totalBreakfastFunction = () => {
     const totalsArray = []
+    let total = 0
     const menus = menuCopy().filter(menu => {if(menu.id === 1){return totalsArray.push(menu.price)}})
-    const total = totalsArray.reduce((total, order) => total + order, 0)
+    total += totalsArray.reduce((total, order) => total + order, 0)
     return total
 }
 
 const totalLunchFunction = () => {
     const totalsArray = []
+    let total = 0
     const menus = menuCopy().filter(menu => {if(menu.type === 'lunch'){return totalsArray.push(menu.price)}})
     totalsArray.pop()
-    const total = totalsArray.reduce((total, order) => total + order, 0)
+    total += totalsArray.reduce((total, order) =>  total + order, 0)
     return total
 }
 
@@ -51,6 +54,23 @@ const serversFunction = () => {
     const servers = serversCopy().filter(server => {if(server.id === 3){return server}})
     return servers
 }
+
+//This made me mad but also need a better way instead of 3 separate functions its 6 am and im exhausted
+const lunchTip = (percent, total) => {
+   const tip = (percent / 100) * total
+    return totalLunchFunction() + tip
+}
+
+const breakfastTip = (percent, total) => {
+    const tip = (percent / 100) * total
+     return totalBreakfastFunction() + tip
+ }
+
+ const dinnerTip = (percent, total) => {
+    const tip = (percent / 100) * total
+     return totalDinnerFunction() + tip
+ }
+
 // This feels like alot for a function
 const render = () => {
     let reservation = ""
@@ -74,8 +94,9 @@ const render = () => {
                     renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                     renderToHTML += `<li>Order Entree(s):${breakfastFunction()}</li>`
                     renderToHTML += `<li>Server: ${server.serverName}</li>`
-                    renderToHTML += `<li>Total: $${totalBreakfastFunction()}</li>`
                     renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2) * 100}%`
+                    renderToHTML += `<li>Subtotal: $${totalBreakfastFunction()}</li>`
+                    renderToHTML += `<li>Total: $${breakfastTip(table.tipPercent.toFixed(2) * 100, parseInt(totalBreakfastFunction())).toFixed(2)}</li>`
                     renderToHTML += `</ul>`
                 } if(table.menuType === "dinner") {
                     renderToHTML += `<ul class="ethan-list">`
@@ -85,8 +106,9 @@ const render = () => {
                     renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                     renderToHTML += `<li>Order Entree(s):${dinnerFunction()}</li>`
                     renderToHTML += `<li>Server: ${server.serverName}</li>`
-                    renderToHTML += `<li>Total: $${totalDinnerFunction()}</li>`
                     renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2) * 100}%`
+                    renderToHTML += `<li>Subtotal: $${totalDinnerFunction()}</li>`
+                    renderToHTML += `<li>Total: $${dinnerTip(table.tipPercent.toFixed(2) * 100, parseInt(totalDinnerFunction())).toFixed(2)}</li>`
                     renderToHTML += `</ul>`
                 } if (table.menuType === 'lunch') {
                     renderToHTML += `<ul class="ethan-list">`
@@ -96,8 +118,9 @@ const render = () => {
                     renderToHTML += `<li>Table Reservation?: ${table.reservation}</li>`
                     renderToHTML += `<li>Order Entree(s):${lunchFunction()}</li>`
                     renderToHTML += `<li>Server: ${server.serverName}</li>`
-                    renderToHTML += `<li>Total: $${totalLunchFunction()}</li>`
                     renderToHTML += `<li>Tip: ${table.tipPercent.toFixed(2) * 100}%`
+                    renderToHTML += `<li>Subtotal: $${totalLunchFunction()}</li>`
+                    renderToHTML += `<li>Total: $${lunchTip(table.tipPercent.toFixed(2) * 100, parseInt(totalLunchFunction())).toFixed(2)}</li>`
                     renderToHTML += `</ul>`
                 }
             }        

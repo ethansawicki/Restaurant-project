@@ -30,7 +30,7 @@ const tables = [
         orderStatus: "complete",
         serverId: 3,
         guestsNumber: 3,
-        tipPercent: 0.2,
+        tipPercent: 0.1,
     },
     {
         id: 4,
@@ -120,7 +120,7 @@ const tables = [
         orderStatus: "complete",
         serverId: 3,
         guestsNumber: 1,
-        tipPercent: 0.2
+        tipPercent: 0.15
     },
     {
         id: 13,
