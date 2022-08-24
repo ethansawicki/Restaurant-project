@@ -44,9 +44,9 @@ for (const jimmyTable of jimmyTables) {
                 <li> Guests: ${jimmyTable.guestsNumber}</li>
                 <li> Reservation: ${jimmyTable.reservation}</li>
                 <li> MenuType: ${jimmyTable.menuType}</li>
-                <li> Order:<br><span class="jimmyColors"> ${jimmyTable.order.join('<br>')}</span></li>
-                <li> Order Status: ${jimmyTable.orderStatus}</li>
-                <li> Price: ${jimmyTable.price}</li>
+                <li> Order: <br><span class="jimmyColors"> ${jimmyTable.order.join('<br>')}</span></li>
+                <li> Order Status: <span class="money"> ${jimmyTable.orderStatus}</span></li>
+                <li> Price: <span class="money"> $${jimmyTable.price}</span></li>
                 <li> Tip: ${jimmyTable.tipPercent * 90}%</li>
         </ul>
         </fieldset>
