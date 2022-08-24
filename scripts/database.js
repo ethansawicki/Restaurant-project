@@ -45,9 +45,9 @@ const tables = [
     {
         id: 5,
         menuID: [2, 1, 16],
-        menuType: "breakfast",
+        menuType: "Breakfast",
         reservation: true,
-        orderStatus: "complete",
+        orderStatus: "Complete",
         serverId: 5,
         guestsNumber: 1,
         tipPercent: 0.2
