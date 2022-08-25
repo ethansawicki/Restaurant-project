@@ -31,6 +31,7 @@ Finish your MVP before starting any challenges.
 - Display the total of tips on the DOM
 
  #Restaurant Part 2
+ https://dbdiagram.io/d/63010952f1a9b01b0facbfd3
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Congratulations!  The restaurant owners liked your initial site and want to move forward.  They had their “tech friend” look at the code and they have given some suggestions to make the code better.  Also, they are asking that you add some functionality.  
 
