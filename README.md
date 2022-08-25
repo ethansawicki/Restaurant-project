@@ -1,8 +1,11 @@
 # Restaurant-project
 
-![README](https://user-images.githubusercontent.com/85176043/183534348-26dbba59-01b1-425f-879a-6e014f59921e.png)
+![README]
+(https://user-images.githubusercontent.com/85176043/183534348-26dbba59-01b1-425f-879a-6e014f59921e.png)
 https://dbdiagram.io/d/63010952f1a9b01b0facbfd3
+
 #Restaurant Part 1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Your team is bidding to build some internal software for a trendy new restaurant. In order to get the bid, your team must quickly build a prototype that demonstrates how the orders will look on the restaurant's internal webpage.
 
 Each member of the staff has their own unique style and wants that to be reflected in the orders that they take. As a team, you decide to create a dashboard that shows the tables & orders for each waitstaff. Strangely, the restaurant's waitstaff has the same number of people as your team, so you decide that each developer will research and build the JavaScript for a wait staffer and add a section to the index.html file to display that staff's tables and orders.
