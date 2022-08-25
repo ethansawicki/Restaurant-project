@@ -1,9 +1,8 @@
 # Restaurant-project
 
-![README]
-(https://user-images.githubusercontent.com/85176043/183534348-26dbba59-01b1-425f-879a-6e014f59921e.png)
+![README](https://user-images.githubusercontent.com/85176043/183534348-26dbba59-01b1-425f-879a-6e014f59921e.png)
 
-https://dbdiagram.io/d/63010952f1a9b01b0facbfd3
+
 
 #Restaurant Part 1
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
