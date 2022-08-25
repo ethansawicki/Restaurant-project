@@ -11,7 +11,7 @@ const tables = [
     },
     {
         id: 2,
-        menuID: [1, 3, 7, 5, 11],
+        menuID: [2, 7, 5, 11],
         menuType: "lunch",
         reservation: true,
         orderStatus: "complete",
@@ -52,22 +52,22 @@ const tables = [
     },
     {
         id: 6,
-        menuID: [0, 0, 0],
+        menuID: [1, 4, 3],
         menuType: "breakfast",
         reservation: true,
         orderStatus: "complete",
         serverId: 2,
-        guestsNumber: 0,
+        guestsNumber: 3,
         tipPercent: 0.2
-    },
+    },  
     {
         id: 7,
-        menuID: [0, 0, 0],
-        menuType: "breakfast",
-        reservation: true,
+        menuID: [5, 4, 8,4],
+        menuType: "dinner",
+        reservation: false,
         orderStatus: "complete",
         serverId: 2,
-        guestsNumber: 0,
+        guestsNumber: 5,
         tipPercent: 0.2
     },
     {
@@ -287,4 +287,5 @@ export const serversCopy = () => {
     return servers.map(server => ({...server}))
 }
 
-
+// let newTables = tables.filter(table => table.serverId === 2);
+// console.log(newTables);
