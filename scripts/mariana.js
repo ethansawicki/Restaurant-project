@@ -61,7 +61,8 @@ const display_Table = () => {
             );
             /* -----------server------------ */
 
-            let date = new Date(Date.now()).toLocaleDateString("en-US");
+            let date = new Date(Date.now()).toLocaleDateString();
+            let time = new Date(Date.now()).toLocaleTimeString();
             MarianaTable = ``;
             MarianaTable += `<fieldset class=table>
         <legend>Table_${table.id} </legend>
@@ -69,6 +70,7 @@ const display_Table = () => {
             MarianaTable += `
             <li class="list">TABLE ID: ${table.id}</li>
             <li class="list">DATE: ${date}  </li>
+            <li class="list">TIME: ${time}  </li>
         <li class="list">ORDERS: ${meals}  </li>
         <li class="list">MEAL: ${table.menuType} </li>
         <li class="list">RESERVATION: ${message}</li>
