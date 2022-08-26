@@ -73,23 +73,23 @@ document.getElementById('menuBeverages').innerHTML = beverageItems;
 
 
 // // /*----------------------------------------------------------NAV_BAR- THis One Works!! ---*/
-// const displayNavBar = () => {
-//     let navbar = `<section class="nav">
-// <ul class="navBar">
-//     <a href="#ethan"><li class="navList">ETHAN</li></a>
-//     <a href="#mariana"><li class="navList">MARIANA</li></a>
-//     <a href="#chase"><li class="navList">CHASE</li></a>
-//     <a href="#jimmy"><li class="navList">JIMMY</li></a>
-//     <a href="#mason"><li class="navList">MASON</li></a>
-// </ul>
-// </section>`;
-//     document.getElementById("navbar").innerHTML = navbar;
-// }
-// displayNavBar()
+const displayNavBar = () => {
+    let navbar = `<section class="nav">
+<ul class="navBar">
+    <a href="#ethan"><li class="navList">ETHAN</li></a>
+    <a href="#mariana"><li class="navList">MARIANA</li></a>
+    <a href="#chase"><li class="navList">CHASE</li></a>
+    <a href="#jimmy"><li class="navList">JIMMY</li></a>
+    <a href="#mason"><li class="navList">MASON</li></a>
+</ul>
+</section>`;
+    document.getElementById("navbar").innerHTML = navbar;
+}
+displayNavBar()
 
-// // /*-------------------------------------------------------------LOGO- THis One Works!! ---*/
-// const displayLogo = () => {
-// let logo = `<img class="img-logo" src="/img_Style/Logo.jpg" alt="restaurant Logo" />`;
-// document.getElementById("logo").innerHTML = logo;
-// }
-// displayLogo()
+// /*-------------------------------------------------------------LOGO- THis One Works!! ---*/
+const displayLogo = () => {
+let logo = `<img class="img-logo" src="/img_Style/Logo.jpg" alt="restaurant Logo" />`;
+document.getElementById("logo").innerHTML = logo;
+}
+displayLogo()
