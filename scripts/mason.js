@@ -41,10 +41,10 @@ const getPrice = () => {
 getPrice();
 
 // DISPLAY ALL TABLES AND THEIR KEY-VALUE PAIRS
-let mason = '';
 const displayTableInfo = () => {
+    let HTML = '';
     for (const masonTable of masonTables) {
-        mason += `
+        HTML += `
             <fieldset class="masonTable"><legend class="masonLegend">Table ${masonTable.id}</legend>
                 <ul class="masonList">
                     <li>Guests: <span class="masonTableValue">${masonTable.guestsNumber}</span></li>
@@ -57,14 +57,17 @@ const displayTableInfo = () => {
                 </ul>
             </fieldset>`
     }
+    document.getElementById('mason').innerHTML = HTML;
 }
 displayTableInfo()
 
 // TIPS
-let tipsTotal = 0;
-for (const table of masonTables) {
-    tipsTotal += table.price * table.tipPercent;
-};
+const displayTipsTotal = () => {
+    let tipsTotal = 0;
+    for (const table of masonTables) {
+        tipsTotal += table.price * table.tipPercent;
+    }
+    document.getElementById('masonTips').innerHTML = `Total in Tips: <span class="masonTipsValue">$${tipsTotal.toFixed(2)}</span>`;
+}
 
-document.getElementById('mason').innerHTML = mason;
-document.getElementById('masonTips').innerHTML = `Total in Tips: <span class="masonTipsValue">$${tipsTotal.toFixed(2)}</span>`;
+displayTipsTotal()
