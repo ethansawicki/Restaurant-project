@@ -2,11 +2,11 @@ import {menuCopy} from './database.js';
 const menu = menuCopy();
 
 // DISPLAY MENU ITEMS ON MENU PAGE
-let breakfastItems = '<h3 class="menuType">Breakfast</h3>';
 const displayBreakfastItems = () => {
+    let HTML = '<h3 class="menuType">Breakfast</h3>';
     for (const menuItem of menu) {
         if (menuItem.type === 'breakfast') {
-            breakfastItems += `
+            HTML += `
             <ul class="menuItemAndPrice">
                 <li class="menuItem">${menuItem.menuItem}</li>
                 <li id="menuSpace"></li>
@@ -14,14 +14,15 @@ const displayBreakfastItems = () => {
             </ul>`
         }
     }
+    document.getElementById('menuBreakfast').innerHTML = HTML;
 }
 displayBreakfastItems()
 
-let lunchItems = '<h3 class="menuType">Lunch</h3>';
 const displayLunchItems = () => {
+    let HTML = '<h3 class="menuType">Lunch</h3>';
     for (const menuItem of menu) {
         if (menuItem.type === 'lunch') {
-            lunchItems += `
+            HTML += `
             <ul class="menuItemAndPrice">
                 <li class="menuItem">${menuItem.menuItem}</li>
                 <li id="menuSpace"></li>
@@ -29,14 +30,15 @@ const displayLunchItems = () => {
             </ul>`
         }
     }
+    document.getElementById('menuLunch').innerHTML = HTML;
 }
 displayLunchItems()
 
-let dinnerItems = '<h3 class="menuType">Dinner</h3>';
 const displayDinnerItems = () => {
+    let HTML = '<h3 class="menuType">Dinner</h3>';
     for (const menuItem of menu) {
         if (menuItem.type === 'dinner') {
-            dinnerItems += `
+            HTML += `
             <ul class="menuItemAndPrice">
                 <li class="menuItem">${menuItem.menuItem}</li>
                 <li id="menuSpace"></li>
@@ -44,14 +46,15 @@ const displayDinnerItems = () => {
             </ul>`
         }
     }
+    document.getElementById('menuDinner').innerHTML = HTML;
 }
 displayDinnerItems()
 
-let beverageItems = '<h3 class="menuType">Beverages</h3>';
 const displayBeverageItems = () => {
+    let HTML = '<h3 class="menuType">Beverages</h3>';
     for (const menuItem of menu) {
         if (menuItem.type === 'drink') {
-            beverageItems += `
+            HTML += `
             <ul class="menuItemAndPrice">
                 <li class="menuItem">${menuItem.menuItem}</li>
                 <li id="menuSpace"></li>
@@ -59,13 +62,10 @@ const displayBeverageItems = () => {
             </ul>`
         }
     }
+    document.getElementById('menuBeverages').innerHTML = HTML;
 }
 displayBeverageItems()
 
-document.getElementById('menuBreakfast').innerHTML = breakfastItems;
-document.getElementById('menuLunch').innerHTML = lunchItems;
-document.getElementById('menuDinner').innerHTML = dinnerItems;
-document.getElementById('menuBeverages').innerHTML = beverageItems;
 
 
 
